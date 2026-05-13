@@ -6,7 +6,10 @@ import Image from "next/image";
 
 export default function PhoenixSection() {
   return (
-    <section className="relative overflow-hidden bg-oakridge-deep py-28 md:py-40">
+    <section 
+      className="relative overflow-hidden py-28 md:py-40"
+      style={{ backgroundColor: "#003057" }}
+    >
       {/* Ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-oakridge-teal/[0.03] blur-3xl pointer-events-none" />
 
@@ -24,7 +27,7 @@ export default function PhoenixSection() {
             alt="The Draft Phoenix"
             width={240}
             height={240}
-            className="phoenix-glow mx-auto"
+            className="phoenix-glow mx-auto rounded-[48px]"
           />
         </motion.div>
 

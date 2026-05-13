@@ -1,0 +1,425 @@
+@import "tailwindcss";
+
+/* ============================================
+   OAKRIDGE MUN XVI — TAILWIND v4 THEME
+   Dark cinematic palette, cyan-forward accents
+   ============================================ */
+
+@theme inline {
+  /* Core palette - Dark Minimalist 2D/3D */
+  --color-oakridge-navy: #041624;
+  --color-oakridge-deep: #020b13;
+  --color-oakridge-teal: #30cdd7;
+  --color-oakridge-light-teal: #b4ebf5;
+  --color-oakridge-dark-teal: #1e96a5;
+  --color-oakridge-warm-white: #e9eff5;
+  --color-oakridge-paper: #0b263b;
+  --color-oakridge-red: #ff3750;
+  --color-oakridge-orange: #e6a25d;
+  --color-oakridge-ink: #01080e;
+  --color-oakridge-muted: #82a0b3;
+  --color-oakridge-gold: #d4a843;
+
+  /* Font */
+  --font-sans: var(--font-montserrat);
+}
+
+/* ============================================
+   ROOT VARIABLES
+   ============================================ */
+
+:root {
+  --background: #041624;
+  --foreground: #e9eff5;
+  --glass-bg: rgba(7, 34, 55, 0.65);
+  --glass-border: rgba(48, 205, 215, 0.15);
+  --glass-border-hover: rgba(48, 205, 215, 0.35);
+  --glow-teal: rgba(48, 205, 215, 0.4);
+  --muted: rgba(130, 160, 179, 0.8);
+  --line: rgba(48, 205, 215, 0.15);
+  --pad: clamp(18px, 4.8vw, 96px);
+  --nav: clamp(88px, 7vw, 132px);
+  --radius: clamp(30px, 6vw, 128px);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+.page-fade {
+  animation: page-fade-in 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes page-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ============================================
+   GRADIENT BACKGROUND
+   ============================================ */
+
+.bg-hero-gradient {
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 30%, rgba(48, 205, 215, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(230, 162, 93, 0.08) 0%, transparent 60%),
+    linear-gradient(180deg, #020b13 0%, #041624 100%);
+}
+
+/* ============================================
+   TYPE + LAYOUT UTILITIES
+   ============================================ */
+
+.font-heading {
+  font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+}
+
+.section-kicker {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-oakridge-teal);
+}
+
+.display-title {
+  font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  font-size: clamp(2.8rem, 5vw, 5.6rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.96;
+  color: var(--color-oakridge-warm-white);
+}
+
+.body-large {
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  color: var(--color-oakridge-muted);
+  line-height: 1.7;
+}
+
+.thin-panel {
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  background: var(--glass-bg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.button-flat {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  background: rgba(11, 38, 59, 0.8);
+  color: var(--color-oakridge-warm-white);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button-flat:hover {
+  border-color: var(--color-oakridge-teal);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(48, 205, 215, 0.15);
+}
+
+.framed {
+  position: relative;
+  min-height: 100svh;
+  padding: var(--nav) var(--pad) var(--pad);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+}
+
+.lines {
+  position: absolute;
+  inset: var(--pad);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+/* ============================================
+   HERO OVERLAY LAYERS
+   ============================================ */
+
+.hero-blur-top {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: clamp(220px, 55vh, 520px);
+  z-index: 20;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 11, 19, 0.9) 0%,
+    rgba(2, 11, 19, 0.35) 45%,
+    rgba(2, 11, 19, 0) 100%
+  );
+  backdrop-filter: blur(4px) saturate(1.2);
+  -webkit-backdrop-filter: blur(4px) saturate(1.2);
+}
+
+.hero-clear-bottom {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: clamp(240px, 45vh, 560px);
+  z-index: 20;
+  pointer-events: none;
+  background: linear-gradient(
+    0deg,
+    rgba(4, 22, 36, 1) 0%,
+    rgba(4, 22, 36, 0.4) 45%,
+    rgba(4, 22, 36, 0) 100%
+  );
+}
+
+/* ============================================
+   GLASSMORPHISM UTILITIES
+   ============================================ */
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-hover:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 0 20px rgba(48, 205, 215, 0.15), inset 0 0 20px rgba(48, 205, 215, 0.05);
+}
+
+/* Liquid glass effect - dark variant */
+.glass-liquid {
+  background: rgba(7, 34, 55, 0.6);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  border: 1px solid rgba(48, 205, 215, 0.12);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 12px 26px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.glass-liquid:hover {
+  background: rgba(11, 38, 59, 0.8);
+  border-color: rgba(48, 205, 215, 0.35);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 14px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   GLOW EFFECTS
+   ============================================ */
+
+.glow-text-cyan {
+  text-shadow: 0 0 20px rgba(48, 205, 215, 0.35), 0 0 40px rgba(48, 205, 215, 0.15);
+}
+
+.glow-text-gold {
+  text-shadow: 0 0 20px rgba(255, 55, 80, 0.2), 0 0 40px rgba(255, 55, 80, 0.1);
+}
+
+/* ============================================
+   PHOENIX SVG ANIMATION
+   ============================================ */
+
+.phoenix-glow {
+  filter: drop-shadow(0 0 30px rgba(48, 205, 215, 0.3)) drop-shadow(0 0 60px rgba(48, 205, 215, 0.1));
+}
+
+.phoenix-float {
+  animation: phoenix-float 6s ease-in-out infinite;
+}
+
+@keyframes phoenix-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+.phoenix-wing-left {
+  animation: wing-left 3s ease-in-out infinite;
+  transform-origin: 60% 60%;
+}
+
+.phoenix-wing-right {
+  animation: wing-right 3s ease-in-out infinite;
+  transform-origin: 40% 60%;
+}
+
+@keyframes wing-left {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-4deg); }
+}
+
+@keyframes wing-right {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(4deg); }
+}
+
+/* ============================================
+   COUNTDOWN TIMER STYLES
+   ============================================ */
+
+.countdown-unit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+}
+
+.countdown-unit::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(48, 205, 215, 0.2);
+}
+
+.countdown-unit:last-child::after {
+  display: none;
+}
+
+/* ============================================
+   DIVIDER LINE (horizontal, with centered text)
+   ============================================ */
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--color-oakridge-muted);
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(48, 205, 215, 0.2), transparent);
+}
+
+/* ============================================
+   AMBIENT PARTICLES (CSS-based, lightweight)
+   ============================================ */
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(88, 196, 211, 0.6) 0%, transparent 70%);
+  pointer-events: none;
+  animation: particle-float linear infinite;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(30px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   NOISE TEXTURE OVERLAY
+   ============================================ */
+
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+/* ============================================
+   ROMAN NUMERAL COMMITTEE SYMBOL
+   ============================================ */
+
+.committee-numeral {
+  font-family: var(--font-montserrat), serif;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  color: var(--color-oakridge-teal);
+  opacity: 0.15;
+  user-select: none;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020b13;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(48, 205, 215, 0.4);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(48, 205, 215, 0.8);
+}
+
+/* ============================================
+   SELECTION
+   ============================================ */
+
+::selection {
+  background: rgba(48, 205, 215, 0.3);
+  color: #fff;
+}

@@ -13,7 +13,7 @@ const FAQ_DATA = [
     items: [
       {
         q: "What is Draft MUN?",
-        a: "Oakridge Model United Nations (OakMUN) is one of the largest and most prestigious high school MUN conferences in Asia. Organised by Oakridge International School, Gachibowli (a Nord Anglia Education institution), OakMUN has run for sixteen consecutive years, hosting hundreds of delegates each edition across a wide range of UN and specialized committees."
+        a: "Draft Model United Nations (DraftMUN) is one of the largest and most prestigious high school MUN conferences in Asia. Organised by Draft International School, Gachibowli (a Nord Anglia Education institution), DraftMUN has run for sixteen consecutive years, hosting hundreds of delegates each edition across a wide range of UN and specialized committees."
       },
       {
         q: "What is Chapter XVI?",
@@ -21,15 +21,15 @@ const FAQ_DATA = [
       },
       {
         q: "When and where is the conference?",
-        a: "Chapter XVI takes place from July 24 to 26, 2026 at Oakridge International School, Gachibowli, Hyderabad, India. All committee sessions, meals, ceremonies, and socials are held on campus."
+        a: "Chapter XVI takes place from July 24 to 26, 2026 at Draft International School, Gachibowli, Hyderabad, India. All committee sessions, meals, ceremonies, and socials are held on campus."
       },
       {
         q: "How many delegates attend?",
-        a: "OakMUN Chapter XVI will host over 650 delegates from schools across India and internationally, making it one of the largest high school MUN events in all of Asia."
+        a: "DraftMUN Chapter XVI will host over 650 delegates from schools across India and internationally, making it one of the largest high school MUN events in all of Asia."
       },
       {
-        q: "What makes OakMUN different from other conferences?",
-        a: "OakMUN stands apart through its scale, its 16-year legacy, its diverse committee slate of 20 committees spanning General Assembly, Crisis, Regional, Legal, and Specialized formats, and its location within a Nord Anglia international school environment. The conference is entirely student-led and is known for its rigorous academic standards and high-quality debate."
+        q: "What makes DraftMUN different from other conferences?",
+        a: "DraftMUN stands apart through its scale, its 16-year legacy, its diverse committee slate of 20 committees spanning General Assembly, Crisis, Regional, Legal, and Specialized formats, and its location within a Nord Anglia international school environment. The conference is entirely student-led and is known for its rigorous academic standards and high-quality debate."
       },
     ],
   },
@@ -75,11 +75,11 @@ const FAQ_DATA = [
       },
       {
         q: "What is the dress code?",
-        a: "OakMUN follows a strict formal dress code: Western business formal (suit, blazer, tie) or formal ethnic attire. Delegates not adhering to the dress code may not be permitted into committee sessions."
+        a: "DraftMUN follows a strict formal dress code: Western business formal (suit, blazer, tie) or formal ethnic attire. Delegates not adhering to the dress code may not be permitted into committee sessions."
       },
       {
         q: "Is accommodation provided?",
-        a: "OakMUN does not provide accommodation. However, recommended hotel options near the campus in Gachibowli will be shared with registered delegations. The venue is well-connected and centrally located in Hyderabad's IT corridor."
+        a: "DraftMUN does not provide accommodation. However, recommended hotel options near the campus in Gachibowli will be shared with registered delegations. The venue is well-connected and centrally located in Hyderabad's IT corridor."
       },
     ],
   },
@@ -88,7 +88,7 @@ const FAQ_DATA = [
     items: [
       {
         q: "What awards are given?",
-        a: "Awards at OakMUN include Best Delegate, High Commendation, Special Mention, and Verbal Mention in each committee. Additionally, best delegation awards recognise schools with consistently outstanding performance across committees."
+        a: "Awards at DraftMUN include Best Delegate, High Commendation, Special Mention, and Verbal Mention in each committee. Additionally, best delegation awards recognise schools with consistently outstanding performance across committees."
       },
       {
         q: "How are delegates evaluated?",

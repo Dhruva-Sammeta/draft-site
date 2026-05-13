@@ -66,7 +66,7 @@ export default function Navbar() {
           {/* Brand: Favicon icon + OAKRIDGE MUN XVI */}
           <Link href="/" className="flex items-center gap-2.5 group shrink-0">
             <Image
-              src="/favicon.png"
+              src="/favicon.svg"
               alt="Draft MUN Crest"
               width={32}
               height={32}

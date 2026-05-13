@@ -21,7 +21,7 @@ export default function PhoenixSection() {
         >
           <Image
             src="/media/phoenix.png"
-            alt="The Oakridge Phoenix"
+            alt="The Draft Phoenix"
             width={240}
             height={240}
             className="phoenix-glow mx-auto"
@@ -35,7 +35,7 @@ export default function PhoenixSection() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="section-kicker mb-5">The Oakridge Phoenix</p>
+          <p className="section-kicker mb-5">The Draft Phoenix</p>
           <h2 className="font-heading text-4xl font-black tracking-[-0.03em] text-oakridge-warm-white md:text-6xl lg:text-7xl">
             <span className="italic text-oakridge-teal">Create.</span>{" "}
             Debate.{" "}

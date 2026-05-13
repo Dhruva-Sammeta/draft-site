@@ -4,7 +4,7 @@ import Button from "@/components/ui/Button";
 
 export const metadata = {
   title: "Register | Draft MUN",
-  description: "Register for the upcoming Oakridge Model United Nations conference.",
+  description: "Register for the upcoming Draft Model United Nations conference.",
 };
 
 export default function RegisterPage() {

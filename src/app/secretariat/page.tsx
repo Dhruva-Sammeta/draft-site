@@ -3,7 +3,7 @@ import BackgroundGrid from "@/components/ui/BackgroundGrid";
 
 export const metadata = {
   title: "Secretariat | Draft MUN",
-  description: "Meet the Secretariat of Oakridge Model United Nations.",
+  description: "Meet the Secretariat of Draft Model United Nations.",
 };
 
 export default function SecretariatPage() {

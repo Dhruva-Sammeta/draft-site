@@ -6,7 +6,7 @@ import HeroContent from "./HeroContent";
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-oakridge-deep">
+    <section id="hero" className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-hero-gradient">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -20,9 +20,8 @@ export default function HeroSection() {
           <source src="/media/hero.mp4" type="video/mp4" />
         </video>
         {/* Cinematic overlay stack */}
-        <div className="absolute inset-0 bg-oakridge-deep/60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-oakridge-deep/50 via-oakridge-deep/20 to-oakridge-navy" />
-        <div className="absolute inset-0 bg-gradient-to-r from-oakridge-deep/30 via-transparent to-oakridge-deep/30" />
+        <div className="absolute inset-0 bg-hero-gradient opacity-85" />
+        <div className="absolute inset-0 bg-oakridge-deep/45" />
       </div>
 
       {/* Subtle animated vignette border */}

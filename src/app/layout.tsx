@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { ScrollProvider } from "@/context/ScrollContext";
@@ -11,6 +11,12 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   title: "Oakridge Model United Nations XVI",
@@ -46,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${montserrat.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col page-fade relative">
+      <body className="min-h-full flex flex-col page-fade relative w-full overflow-x-hidden">
         <SmoothScroll />
         <ScrollProvider>
           <Navbar />

@@ -61,8 +61,9 @@ export default function SecGenNote() {
         >
           &ldquo;Sixteen years ago, this conference was a dream held by a handful of
           students with a belief that young voices could shape the world. Today,
-          as we stand at Chapter XVI, that dream has never felt more real — or
-          more urgent.&rdquo;
+          as we stand at Chapter XVI, that dream has never felt more real —or
+          more urgent at a time when rebuilding diplomacy is no longer an ideal,
+          but a necessity.&rdquo;
         </motion.blockquote>
 
         {/* Author */}

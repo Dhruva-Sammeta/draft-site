@@ -67,7 +67,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2.5 group shrink-0">
             <Image
               src="/favicon.png"
-              alt="Oakridge MUN Crest"
+              alt="Draft MUN Crest"
               width={32}
               height={32}
               className="drop-shadow-md"
@@ -143,7 +143,7 @@ export default function Navbar() {
               <div className="mb-8 flex flex-col items-center gap-3">
                 <Image
                   src="/favicon.png"
-                  alt="Oakridge MUN"
+                  alt="Draft MUN"
                   width={56}
                   height={56}
                   className="drop-shadow-xl"

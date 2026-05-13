@@ -4,8 +4,8 @@ import { committeesData } from "@/data/committees";
 import BackgroundGrid from "@/components/ui/BackgroundGrid";
 
 export const metadata = {
-  title: "Committees | Oakridge MUN Chapter XVI",
-  description: "Explore all 20 committees at Oakridge MUN Chapter XVI. From General Assembly to Crisis, find the right committee for you.",
+  title: "Committees | Draft MUN Chapter XVI",
+  description: "Explore all 20 committees at Draft MUN Chapter XVI. From General Assembly to Crisis, find the right committee for you.",
 };
 
 export default function CommitteesPage() {

@@ -69,7 +69,7 @@ export default function HeroContent() {
       <motion.div variants={itemVariants}>
         <Image
           src="/favicon.png"
-          alt="Oakridge MUN Crest"
+          alt="Draft MUN Crest"
           width={64}
           height={64}
           className="mx-auto drop-shadow-[0_0_40px_rgba(48,205,215,0.3)] sm:w-20 sm:h-20"

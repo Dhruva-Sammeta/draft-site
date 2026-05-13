@@ -3,8 +3,8 @@ import BackgroundGrid from "@/components/ui/BackgroundGrid";
 import Button from "@/components/ui/Button";
 
 export const metadata = {
-  title: "Contact | Oakridge MUN",
-  description: "Get in touch with the Oakridge MUN team.",
+  title: "Contact | Draft MUN",
+  description: "Get in touch with the Draft MUN team.",
 };
 
 export default function ContactPage() {
@@ -17,7 +17,7 @@ export default function ContactPage() {
           <p className="section-kicker">Reach Out</p>
           <h1 className="display-title">Get in touch.</h1>
           <p className="body-large mt-6">
-            Questions about registrations, committees, resources, or conference logistics can come straight to the Oakridge MUN team.
+            Questions about registrations, committees, resources, or conference logistics can come straight to the Draft MUN team.
           </p>
         </div>
 

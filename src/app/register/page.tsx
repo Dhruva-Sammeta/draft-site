@@ -3,7 +3,7 @@ import BackgroundGrid from "@/components/ui/BackgroundGrid";
 import Button from "@/components/ui/Button";
 
 export const metadata = {
-  title: "Register | Oakridge MUN",
+  title: "Register | Draft MUN",
   description: "Register for the upcoming Oakridge Model United Nations conference.",
 };
 

@@ -32,7 +32,7 @@ export default function Footer() {
             <div className="mb-5 flex items-center gap-3">
               <Image
                 src="/favicon.png"
-                alt="Oakridge MUN"
+                alt="Draft MUN"
                 width={36}
                 height={36}
                 className="drop-shadow-md"

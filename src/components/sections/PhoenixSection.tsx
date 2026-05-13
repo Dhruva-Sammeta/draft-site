@@ -61,7 +61,7 @@ export default function PhoenixSection() {
             world as it is, but to reimagine it as it should be.
           </p>
           <p className="text-oakridge-warm-white/90 font-semibold">
-            Sixteen years of Oakridge MUN have proven that the conference room is where the next
+            Sixteen years of Draft MUN have proven that the conference room is where the next
             generation of diplomats, policymakers, and changemakers find their voice. Chapter XVI
             continues that tradition - sharper, bolder, and more urgent than ever.
           </p>

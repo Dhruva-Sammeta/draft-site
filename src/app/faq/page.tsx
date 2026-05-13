@@ -12,12 +12,12 @@ const FAQ_DATA = [
     category: "About the Conference",
     items: [
       {
-        q: "What is Oakridge MUN?",
+        q: "What is Draft MUN?",
         a: "Oakridge Model United Nations (OakMUN) is one of the largest and most prestigious high school MUN conferences in Asia. Organised by Oakridge International School, Gachibowli (a Nord Anglia Education institution), OakMUN has run for sixteen consecutive years, hosting hundreds of delegates each edition across a wide range of UN and specialized committees."
       },
       {
         q: "What is Chapter XVI?",
-        a: "Chapter XVI is the sixteenth edition of Oakridge MUN. Each annual edition is referred to as a 'Chapter', continuing the legacy of diplomatic simulation, leadership development, and global awareness that the conference was founded on."
+        a: "Chapter XVI is the sixteenth edition of Draft MUN. Each annual edition is referred to as a 'Chapter', continuing the legacy of diplomatic simulation, leadership development, and global awareness that the conference was founded on."
       },
       {
         q: "When and where is the conference?",
@@ -63,7 +63,7 @@ const FAQ_DATA = [
     items: [
       {
         q: "How do I register?",
-        a: "Registration opens through the official Oakridge MUN registration portal. Head delegates should register their delegations, after which individual delegates will be assigned to committees. Visit the Register page for the latest registration link and deadlines."
+        a: "Registration opens through the official Draft MUN registration portal. Head delegates should register their delegations, after which individual delegates will be assigned to committees. Visit the Register page for the latest registration link and deadlines."
       },
       {
         q: "Is there a registration fee?",
@@ -148,7 +148,7 @@ export default function FAQPage() {
           <p className="section-kicker mb-3">Support</p>
           <h1 className="display-title">Frequently asked questions.</h1>
           <p className="body-large mt-4 max-w-2xl">
-            Everything you need to know about Oakridge MUN Chapter XVI. If your question isn&apos;t answered here, reach out via the Contact page.
+            Everything you need to know about Draft MUN Chapter XVI. If your question isn&apos;t answered here, reach out via the Contact page.
           </p>
         </div>
 

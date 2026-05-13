@@ -3,8 +3,8 @@ import BackgroundGrid from "@/components/ui/BackgroundGrid";
 import Button from "@/components/ui/Button";
 
 export const metadata = {
-  title: "Resources | Oakridge MUN",
-  description: "Official documents, guides, and resources for Oakridge MUN.",
+  title: "Resources | Draft MUN",
+  description: "Official documents, guides, and resources for Draft MUN.",
 };
 
 const resourceCategories = [

@@ -4,6 +4,7 @@ import "./globals.css";
 import { ScrollProvider } from "@/context/ScrollContext";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -45,6 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col page-fade relative">
+        <SmoothScroll />
         <ScrollProvider>
           <Navbar />
           <main className="flex-grow z-10 relative">

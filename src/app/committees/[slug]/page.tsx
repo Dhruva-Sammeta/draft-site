@@ -31,6 +31,12 @@ export default function CommitteeDetail({ params }: { params: { slug: string } }
 
   const prevCommittee = committeeIndex > 0 ? committeesData[committeeIndex - 1] : null;
   const nextCommittee = committeeIndex < committeesData.length - 1 ? committeesData[committeeIndex + 1] : null;
+  const chairs = committee.chairs.length
+    ? committee.chairs
+    : [
+        { role: "Chairperson", name: "TBA" },
+        { role: "Vice Chairperson", name: "TBA" },
+      ];
 
   return (
     <div className="relative min-h-screen bg-oakridge-navy pt-36 pb-24">
@@ -123,17 +129,17 @@ export default function CommitteeDetail({ params }: { params: { slug: string } }
           <section className="pt-8">
             <p className="section-kicker mb-4">Executive Board</p>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-              {["Chairperson", "Vice-Chairperson"].map((role) => (
+              {chairs.map((chair) => (
                 <div
-                  key={role}
+                  key={`${committee.slug}-${chair.role}`}
                   className="flex items-center gap-4 rounded-[22px] border border-oakridge-teal/15 bg-oakridge-navy p-5"
                 >
                   <div className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-oakridge-paper font-black text-oakridge-teal text-lg">
                     EB
                   </div>
                   <div>
-                    <h3 className="font-sans text-lg font-black text-oakridge-warm-white">TBA</h3>
-                    <p className="text-sm text-oakridge-muted">{role}</p>
+                    <h3 className="font-sans text-lg font-black text-oakridge-warm-white">{chair.name}</h3>
+                    <p className="text-sm text-oakridge-muted">{chair.role}</p>
                   </div>
                 </div>
               ))}

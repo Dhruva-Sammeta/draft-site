@@ -3,18 +3,29 @@
 // Edit slugs, names, descriptions, agendas, and symbols here.
 // ============================================================================
 
+export interface CommitteeChair {
+  role: string;
+  name: string;
+}
+
 export interface Committee {
   slug: string;
   name: string;
   fullName: string;
   type: string;
   delegateCount: string;
+  chairs: CommitteeChair[];
   description: string;
   symbol: string;        // Short text symbol (roman numeral / abbreviation)
   difficulty: "Beginner" | "Intermediate" | "Advanced";
   agenda: string;
   overview: string;
 }
+
+const defaultChairs: CommitteeChair[] = [
+  { role: "Chairperson", name: "TBA" },
+  { role: "Vice Chairperson", name: "TBA" },
+];
 
 export const committeesData: Committee[] = [
   {
@@ -23,6 +34,7 @@ export const committeesData: Committee[] = [
     fullName: "Disarmament and International Security Committee",
     type: "General Assembly",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "The First Committee of the UN General Assembly deals with disarmament, global challenges, and threats to peace.",
     symbol: "I",
     difficulty: "Beginner",
@@ -35,6 +47,7 @@ export const committeesData: Committee[] = [
     fullName: "United Nations Security Council",
     type: "Crisis / Specialized",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "The primary UN body responsible for maintaining international peace and security with binding resolution power.",
     symbol: "II",
     difficulty: "Advanced",
@@ -47,6 +60,7 @@ export const committeesData: Committee[] = [
     fullName: "United Nations Human Rights Council",
     type: "General Assembly",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "The principal UN body addressing human rights violations and promoting universal protection of fundamental freedoms.",
     symbol: "III",
     difficulty: "Beginner",
@@ -59,6 +73,7 @@ export const committeesData: Committee[] = [
     fullName: "Joint Crisis Committee - Cabinet 1",
     type: "Crisis",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "One half of a dual-committee crisis simulation where opposing cabinets engage in strategic, real-time decision-making.",
     symbol: "IV",
     difficulty: "Advanced",
@@ -71,6 +86,7 @@ export const committeesData: Committee[] = [
     fullName: "Joint Crisis Committee - Cabinet 2",
     type: "Crisis",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "The opposing cabinet in the dual-committee crisis, operating in direct strategic competition with JCC 1.",
     symbol: "V",
     difficulty: "Advanced",
@@ -83,6 +99,7 @@ export const committeesData: Committee[] = [
     fullName: "Historical Crisis Committee",
     type: "Crisis / Specialized",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "A crisis committee set in a specific historical period, where delegates assume the roles of real historical figures.",
     symbol: "VI",
     difficulty: "Advanced",
@@ -95,6 +112,7 @@ export const committeesData: Committee[] = [
     fullName: "House of the People - Parliament of India",
     type: "Regional Body",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "A simulation of India's lower house of Parliament, debating critical national policy and legislation.",
     symbol: "VII",
     difficulty: "Intermediate",
@@ -107,6 +125,7 @@ export const committeesData: Committee[] = [
     fullName: "Continuous Crisis Committee",
     type: "Crisis",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "A fast-paced, continuous crisis committee with non-stop updates and rapid-fire decision making.",
     symbol: "VIII",
     difficulty: "Advanced",
@@ -119,6 +138,7 @@ export const committeesData: Committee[] = [
     fullName: "Organisation of Islamic Cooperation",
     type: "Regional Body",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "The second-largest intergovernmental organization after the UN, representing 57 member states across four continents.",
     symbol: "IX",
     difficulty: "Intermediate",
@@ -131,6 +151,7 @@ export const committeesData: Committee[] = [
     fullName: "United Nations Entity for Gender Equality and the Empowerment of Women",
     type: "ECOSOC",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "The UN entity dedicated to gender equality and the empowerment of women worldwide.",
     symbol: "X",
     difficulty: "Beginner",
@@ -143,6 +164,7 @@ export const committeesData: Committee[] = [
     fullName: "Committee on the Peaceful Uses of Outer Space",
     type: "Specialized Agency",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "The UN committee governing the exploration and use of outer space for the benefit of all humanity.",
     symbol: "XI",
     difficulty: "Intermediate",
@@ -155,6 +177,7 @@ export const committeesData: Committee[] = [
     fullName: "United States Senate Simulation",
     type: "Regional Body",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "A simulation of the upper chamber of the US Congress, debating landmark domestic and foreign policy legislation.",
     symbol: "XII",
     difficulty: "Intermediate",
@@ -167,6 +190,7 @@ export const committeesData: Committee[] = [
     fullName: "Bilderberg Conference Simulation",
     type: "Specialized",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "A simulation of the exclusive annual gathering of political leaders, experts, and industry titans under Chatham House Rules.",
     symbol: "XIII",
     difficulty: "Advanced",
@@ -179,6 +203,7 @@ export const committeesData: Committee[] = [
     fullName: "Economic and Financial Committee",
     type: "General Assembly",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "The Second Committee of the UN General Assembly, addressing global economic policy, development financing, and trade.",
     symbol: "XIV",
     difficulty: "Intermediate",
@@ -191,6 +216,7 @@ export const committeesData: Committee[] = [
     fullName: "Joint Legal Bodies Simulation",
     type: "Legal",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "A combined simulation of the International Court of Justice, International Residual Mechanism, and Crime Prevention Commission.",
     symbol: "XV",
     difficulty: "Advanced",
@@ -203,6 +229,7 @@ export const committeesData: Committee[] = [
     fullName: "Federation Internationale de Football Association Congress",
     type: "Specialized",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "The supreme legislative body of world football, where member associations shape the future of the beautiful game.",
     symbol: "XVI",
     difficulty: "Beginner",
@@ -215,6 +242,7 @@ export const committeesData: Committee[] = [
     fullName: "World Health Organization",
     type: "Specialized Agency",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "The UN specialized agency directing and coordinating international health policy and pandemic preparedness.",
     symbol: "XVII",
     difficulty: "Intermediate",
@@ -227,6 +255,7 @@ export const committeesData: Committee[] = [
     fullName: "Social, Humanitarian and Cultural Committee",
     type: "General Assembly",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "The Third Committee of the UNGA, addressing social, humanitarian, and human rights issues worldwide.",
     symbol: "XVIII",
     difficulty: "Beginner",
@@ -239,6 +268,7 @@ export const committeesData: Committee[] = [
     fullName: "The Simulation of Past Political Movements",
     type: "Specialized",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "A unique committee simulating pivotal political movements and their impact on world history.",
     symbol: "XIX",
     difficulty: "Intermediate",
@@ -251,6 +281,7 @@ export const committeesData: Committee[] = [
     fullName: "International Press Corps",
     type: "Press",
     delegateCount: "Single Delegate",
+    chairs: defaultChairs,
     description: "The eyes and ears of the conference - journalists, photographers, and editors covering every committee in real time.",
     symbol: "XX",
     difficulty: "Intermediate",

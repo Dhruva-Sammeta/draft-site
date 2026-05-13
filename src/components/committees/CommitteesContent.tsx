@@ -1,0 +1,89 @@
+"use client";
+
+import React, { useEffect, useState } from "react";
+import CommitteeCard from "@/components/ui/CommitteeCard";
+import CommitteeModal from "@/components/ui/CommitteeModal";
+import BackgroundGrid from "@/components/ui/BackgroundGrid";
+import { committeesData } from "@/data/committees";
+
+const typeOrder = [
+  "General Assembly",
+  "Crisis / Specialized",
+  "Crisis",
+  "Regional Body",
+  "ECOSOC",
+  "Specialized Agency",
+  "Specialized",
+  "Legal",
+  "Press",
+];
+
+const typeGroups = committeesData.reduce((acc, committee) => {
+  if (!acc[committee.type]) acc[committee.type] = [];
+  acc[committee.type].push(committee);
+  return acc;
+}, {} as Record<string, typeof committeesData>);
+
+export default function CommitteesContent() {
+  const [activeSlug, setActiveSlug] = useState<string | null>(null);
+
+  const activeCommittee = activeSlug
+    ? committeesData.find((committee) => committee.slug === activeSlug) ?? null
+    : null;
+
+  useEffect(() => {
+    if (!activeSlug) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [activeSlug]);
+
+  return (
+    <div className="relative min-h-screen bg-oakridge-navy pt-36 pb-24">
+      <BackgroundGrid />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-6">
+        {/* Header */}
+        <div className="mb-16">
+          <div className="mb-8 flex flex-col gap-4 md:grid md:grid-cols-[0.5fr_1fr_0.7fr] md:items-end md:gap-6">
+            <p className="section-kicker">Chapter XVI / {committeesData.length} Committees</p>
+            <h1 className="display-title">Conference committees.</h1>
+            <p className="body-large">
+              From General Assembly to fast-paced crisis simulations, discover the full committee slate for this year&apos;s conference.
+            </p>
+          </div>
+
+          {/* Category filter pills */}
+          <div className="flex flex-wrap gap-2">
+            {typeOrder.filter((type) => typeGroups[type]).map((type) => (
+              <span
+                key={type}
+                className="inline-flex items-center gap-1.5 rounded-full border border-oakridge-teal/20 bg-oakridge-paper/50 px-4 py-1.5 text-xs font-bold text-oakridge-muted"
+              >
+                {type}
+                <span className="text-oakridge-teal">{typeGroups[type].length}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Committee List */}
+        <div className="grid">
+          {committeesData.map((committee, index) => (
+            <CommitteeCard
+              key={committee.slug}
+              index={index}
+              onOpen={(slug) => setActiveSlug(slug)}
+              {...committee}
+            />
+          ))}
+        </div>
+      </div>
+
+      <CommitteeModal committee={activeCommittee} onClose={() => setActiveSlug(null)} />
+    </div>
+  );
+}

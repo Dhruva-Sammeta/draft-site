@@ -7,6 +7,7 @@ import type { Committee } from "@/data/committees";
 
 interface CommitteeCardProps extends Committee {
   index: number;
+  onOpen?: (slug: string) => void;
 }
 
 const glowColor = {
@@ -25,8 +26,20 @@ export default function CommitteeCard({
   difficulty,
   agenda,
   index,
+  onOpen,
 }: CommitteeCardProps) {
   const number = String(index + 1).padStart(2, "0");
+  const Wrapper = (onOpen ? "button" : Link) as React.ElementType;
+  const wrapperProps = onOpen
+    ? {
+        type: "button",
+        onClick: () => onOpen(slug),
+        "aria-label": `Open details for ${name}`,
+        "aria-haspopup": "dialog" as const,
+      }
+    : {
+        href: `/committees/${slug}`,
+      };
 
   return (
     <motion.article
@@ -36,9 +49,9 @@ export default function CommitteeCard({
       transition={{ duration: 0.65, delay: index * 0.03, ease: [0.22, 1, 0.36, 1] }}
       className={`group border-t border-oakridge-teal/15 last:border-b rounded-xl transition-all duration-300 hover:bg-oakridge-warm-white hover:scale-[1.015] hover:shadow-[0_8px_30px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 hover:border-transparent hover:z-10 ${glowColor[difficulty]}`}
     >
-      <Link
-        href={`/committees/${slug}`}
-        className="grid min-h-[130px] grid-cols-[50px_1fr] gap-4 px-4 py-6 md:grid-cols-[60px_48px_minmax(200px,0.4fr)_1fr_auto] md:items-center md:gap-6"
+      <Wrapper
+        {...wrapperProps}
+        className="grid w-full min-h-[130px] grid-cols-[50px_1fr] gap-4 px-4 py-6 text-left md:grid-cols-[60px_48px_minmax(200px,0.4fr)_1fr_auto] md:items-center md:gap-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oakridge-teal/60 focus-visible:ring-offset-2 focus-visible:ring-offset-oakridge-navy"
       >
         <span className="font-mono text-sm font-black text-oakridge-red group-hover:text-oakridge-red">{number}.</span>
         <span className="hidden md:block text-lg font-black italic text-oakridge-teal/40 tracking-wide group-hover:text-oakridge-dark-teal">
@@ -58,7 +71,7 @@ export default function CommitteeCard({
           <p className="mt-1 text-xs text-oakridge-teal/60 group-hover:text-oakridge-dark-teal line-clamp-1 hidden md:block">Agenda: {agenda}</p>
         </div>
         <span className="col-start-2 md:col-start-auto text-[10px] font-bold text-oakridge-muted group-hover:text-oakridge-navy/50">{delegateCount}</span>
-      </Link>
+      </Wrapper>
     </motion.article>
   );
 }

@@ -74,7 +74,7 @@ export default function Navbar() {
               priority
             />
             <span className="text-oakridge-warm-white font-black text-sm tracking-[0.08em] uppercase group-hover:text-oakridge-teal transition-colors duration-300 sm:text-[15px]">
-              OAKRIDGE MUN <span className="text-oakridge-teal">XVI</span>
+              MUN <span className="text-oakridge-teal">XVI</span>
             </span>
           </Link>
 
@@ -134,7 +134,7 @@ export default function Navbar() {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed inset-0 z-40 md:hidden"
+            className="fixed inset-0 z-50 md:hidden"
           >
             <div className="absolute inset-0 bg-oakridge-navy/95 backdrop-blur-xl" />
 
@@ -142,14 +142,14 @@ export default function Navbar() {
               {/* Brand in mobile menu */}
               <div className="mb-8 flex flex-col items-center gap-3">
                 <Image
-                  src="/favicon.png"
+                  src="/favicon.svg"
                   alt="Draft MUN"
                   width={56}
                   height={56}
                   className="drop-shadow-xl"
                 />
                 <span className="text-oakridge-warm-white font-black text-lg tracking-[0.1em] uppercase">
-                  OAKRIDGE MUN <span className="text-oakridge-teal">XVI</span>
+                  MUN <span className="text-oakridge-teal">XVI</span>
                 </span>
               </div>
               {NAV_ITEMS.map((item, i) => (

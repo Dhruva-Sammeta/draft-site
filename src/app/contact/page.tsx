@@ -1,68 +1,110 @@
 import React from "react";
 import BackgroundGrid from "@/components/ui/BackgroundGrid";
-import Button from "@/components/ui/Button";
 
 export const metadata = {
   title: "Contact | Draft MUN",
   description: "Get in touch with the Draft MUN team.",
 };
 
+const CONTACT_EMAIL = "oakmun@oakridge.in";
+const INSTAGRAM_URL = "https://www.instagram.com/oakmun.official";
+
 export default function ContactPage() {
   return (
     <div className="relative min-h-screen bg-oakridge-navy pt-36 pb-24">
       <BackgroundGrid />
 
-      <div className="relative z-10 mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[0.82fr_1.05fr] lg:items-center">
-        <div>
-          <p className="section-kicker">Reach Out</p>
-          <h1 className="display-title">Get in touch.</h1>
-          <p className="body-large mt-6">
-            Questions about registrations, committees, resources, or conference logistics can come straight to the Draft MUN team.
+      <div className="relative z-10 mx-auto max-w-4xl px-6">
+        {/* Header */}
+        <div className="mb-16">
+          <p className="section-kicker">Get in Touch</p>
+          <h1 className="display-title">Say hello.</h1>
+          <p className="body-large mt-6 max-w-xl">
+            Questions about registrations, committees, background guides, or
+            anything else — reach out and we&apos;ll get back to you.
           </p>
         </div>
 
-        <div className="thin-panel bg-oakridge-navy p-6 md:p-10">
-          <div className="mb-8 flex items-start justify-between gap-6 border-b border-oakridge-teal/10 pb-6">
-            <h2 className="font-sans text-2xl font-black tracking-[-0.05em] text-oakridge-warm-white sm:text-4xl">
-              Send a message
-            </h2>
-            <p className="text-right text-[11px] font-black uppercase tracking-[0.22em] text-oakridge-dark-teal">
-              Chapter XVI
-            </p>
-          </div>
+        {/* Contact cards */}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          {/* Email */}
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="group thin-panel flex flex-col gap-6 p-8 transition-all duration-300 hover:border-oakridge-teal/40"
+          >
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-oakridge-teal/30 bg-oakridge-teal/10 text-oakridge-teal transition-colors group-hover:bg-oakridge-teal/20">
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <div>
+              <p className="mb-1 text-[11px] font-black uppercase tracking-[0.22em] text-oakridge-dark-teal">
+                Email us
+              </p>
+              <p className="font-sans text-xl font-black tracking-[-0.03em] text-oakridge-warm-white group-hover:text-oakridge-teal transition-colors">
+                {CONTACT_EMAIL}
+              </p>
+              <p className="mt-2 text-sm text-oakridge-muted">
+                Send us a mail and we&apos;ll respond within 48 hours.
+              </p>
+            </div>
+            <span className="mt-auto text-oakridge-teal/60 text-sm group-hover:text-oakridge-teal transition-colors">
+              Open mail client →
+            </span>
+          </a>
 
-          <form className="space-y-7" action="mailto:contact@oakridge.in" method="post" encType="text/plain">
-            <label className="grid gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-oakridge-muted">
-              Name
-              <input
-                type="text"
-                className="border-0 border-b border-oakridge-teal/20 bg-transparent px-0 py-3 text-lg font-bold normal-case tracking-normal text-oakridge-warm-white outline-none transition-colors placeholder:text-oakridge-warm-white/20 focus:border-oakridge-teal sm:text-2xl"
-                placeholder="Your full name"
-                required
-              />
-            </label>
-            <label className="grid gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-oakridge-muted">
-              Email
-              <input
-                type="email"
-                className="border-0 border-b border-oakridge-teal/20 bg-transparent px-0 py-3 text-lg font-bold normal-case tracking-normal text-oakridge-warm-white outline-none transition-colors placeholder:text-oakridge-warm-white/20 focus:border-oakridge-teal sm:text-2xl"
-                placeholder="you@example.com"
-                required
-              />
-            </label>
-            <label className="grid gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-oakridge-muted">
-              Message
-              <textarea
-                className="h-36 resize-none border-0 border-b border-oakridge-teal/20 bg-transparent px-0 py-3 text-2xl font-bold normal-case tracking-normal text-oakridge-warm-white outline-none transition-colors placeholder:text-oakridge-warm-white/20 focus:border-oakridge-teal"
-                placeholder="How can we help?"
-                required
-              />
-            </label>
-            <Button variant="primary" className="w-full">
-              Send Message
-            </Button>
-          </form>
+          {/* Instagram */}
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group thin-panel flex flex-col gap-6 p-8 transition-all duration-300 hover:border-oakridge-teal/40"
+          >
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-oakridge-teal/30 bg-oakridge-teal/10 text-oakridge-teal transition-colors group-hover:bg-oakridge-teal/20">
+              {/* Instagram icon */}
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" strokeWidth={0} />
+              </svg>
+            </div>
+            <div>
+              <p className="mb-1 text-[11px] font-black uppercase tracking-[0.22em] text-oakridge-dark-teal">
+                DM us on Instagram
+              </p>
+              <p className="font-sans text-xl font-black tracking-[-0.03em] text-oakridge-warm-white group-hover:text-oakridge-teal transition-colors">
+                @oakmun.official
+              </p>
+              <p className="mt-2 text-sm text-oakridge-muted">
+                Slide into our DMs for quick queries, updates, and announcements.
+              </p>
+            </div>
+            <span className="mt-auto text-oakridge-teal/60 text-sm group-hover:text-oakridge-teal transition-colors">
+              Open Instagram →
+            </span>
+          </a>
         </div>
+
+        {/* Bottom note */}
+        <p className="mt-12 text-center text-sm text-oakridge-muted">
+          We typically respond within 24–48 hours. For urgent matters, Instagram DMs are faster.
+        </p>
       </div>
     </div>
   );

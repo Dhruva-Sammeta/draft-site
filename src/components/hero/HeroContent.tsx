@@ -68,7 +68,7 @@ export default function HeroContent() {
       {/* Logo Crest */}
       <motion.div variants={itemVariants}>
         <Image
-          src="/favicon.png"
+          src="/favicon.svg"
           alt="Draft MUN Crest"
           width={64}
           height={64}

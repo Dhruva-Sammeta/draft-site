@@ -73,7 +73,7 @@ export default function SecGenNote() {
           <div className="h-px flex-1 bg-oakridge-teal/20" />
           <div className="text-right">
             <p className="font-sans text-base font-black text-oakridge-warm-white">
-              Dhruva Sammeta
+              Shrey Vajpayee
             </p>
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-oakridge-dark-teal">
               Secretary-General, Chapter XVI

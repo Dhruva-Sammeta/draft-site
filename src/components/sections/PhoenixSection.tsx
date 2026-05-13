@@ -24,7 +24,7 @@ export default function PhoenixSection() {
         >
           <Image
             src="/media/phoenix.png"
-            alt="The Draft Phoenix"
+            alt="The Oakridge Phoenix"
             width={240}
             height={240}
             className="phoenix-glow mx-auto rounded-[48px]"
@@ -38,7 +38,7 @@ export default function PhoenixSection() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="section-kicker mb-5">The Draft Phoenix</p>
+          <p className="section-kicker mb-5">The Oakridge Phoenix</p>
           <h2 className="font-heading text-4xl font-black tracking-[-0.03em] text-oakridge-warm-white md:text-6xl lg:text-7xl">
             <span className="italic text-oakridge-teal">Create.</span>{" "}
             Debate.{" "}
@@ -64,7 +64,7 @@ export default function PhoenixSection() {
             world as it is, but to reimagine it as it should be.
           </p>
           <p className="text-oakridge-warm-white/90 font-semibold">
-            Sixteen years of Draft MUN have proven that the conference room is where the next
+            Sixteen years of Oakridge MUN have proven that the conference room is where the next
             generation of diplomats, policymakers, and changemakers find their voice. Chapter XVI
             continues that tradition - sharper, bolder, and more urgent than ever.
           </p>

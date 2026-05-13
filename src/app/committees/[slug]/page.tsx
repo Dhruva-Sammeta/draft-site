@@ -16,7 +16,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   if (!committee) return { title: "Not Found" };
 
   return {
-    title: `${committee.name} - ${committee.fullName} | Draft MUN XVI`,
+    title: `${committee.name} - ${committee.fullName} | Oakridge MUN XVI`,
     description: `${committee.description} Agenda: ${committee.agenda}`,
   };
 }

@@ -13,12 +13,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Draft Model United Nations | Chapter XVI",
+  title: "Oakridge Model United Nations XVI",
   description:
-    "Celebrating 15 years of Draft MUN. Join 650+ delegates across 20 committees at the premier Model United Nations conference. July 24-26, 2026.",
+    "Celebrating 16 years of Oakridge MUN. Join 650+ delegates across 20 committees at the premier Model United Nations conference. July 24-26, 2026.",
   keywords: [
-    "Draft MUN",
+    "Oakridge MUN",
     "Model United Nations",
+    "OAKRIDGE MUN XVI",
     "MUN Conference",
     "Diplomacy",
     "Nord Anglia",
@@ -32,8 +33,8 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
   },
   openGraph: {
-    title: "Draft Model United Nations | Chapter XVI",
-    description: "Celebrating 15 years of Draft MUN. 650+ delegates, 20 committees, 3 days.",
+    title: "Oakridge Model United Nations XVI",
+    description: "Celebrating 16 years of Oakridge MUN. 650+ delegates, 20 committees, 3 days.",
     type: "website",
   },
 };

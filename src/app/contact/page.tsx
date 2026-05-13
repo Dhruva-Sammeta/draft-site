@@ -2,8 +2,8 @@ import React from "react";
 import BackgroundGrid from "@/components/ui/BackgroundGrid";
 
 export const metadata = {
-  title: "Contact | Draft MUN",
-  description: "Get in touch with the Draft MUN team.",
+  title: "Contact | Oakridge MUN",
+  description: "Get in touch with the Oakridge MUN team.",
 };
 
 const CONTACT_EMAIL = "oakmun@oakridge.in";

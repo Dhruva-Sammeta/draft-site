@@ -3,8 +3,8 @@ import BackgroundGrid from "@/components/ui/BackgroundGrid";
 import Button from "@/components/ui/Button";
 
 export const metadata = {
-  title: "Resources | Draft MUN",
-  description: "Official documents, guides, and resources for Draft MUN.",
+  title: "Resources | Oakridge MUN",
+  description: "Official documents, guides, and resources for Oakridge MUN.",
 };
 
 // Update this URL once the Excel file is uploaded / shared

@@ -2,8 +2,8 @@ import React from "react";
 import BackgroundGrid from "@/components/ui/BackgroundGrid";
 
 export const metadata = {
-  title: "Secretariat | Draft MUN",
-  description: "Meet the Secretariat of Draft Model United Nations.",
+  title: "Secretariat | Oakridge MUN",
+  description: "Meet the Secretariat of Oakridge Model United Nations.",
 };
 
 export default function SecretariatPage() {
@@ -15,7 +15,7 @@ export default function SecretariatPage() {
         <p className="section-kicker">Leadership</p>
         <h1 className="display-title">Meet the secretariat.</h1>
         <p className="body-large mx-auto mt-6 max-w-2xl">
-          The dedicated team behind Draft MUN, working to deliver a focused, polished, and rigorous conference experience.
+          The dedicated team behind Oakridge MUN, working to deliver a focused, polished, and rigorous conference experience.
         </p>
 
         <div className="thin-panel mx-auto mt-14 max-w-3xl p-10 md:p-16">

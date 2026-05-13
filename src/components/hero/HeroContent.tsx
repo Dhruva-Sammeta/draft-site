@@ -20,8 +20,8 @@ const HERO_CONFIG = {
     line1: "CELEBRATING",
     highlight: "16 YEARS",
     line2: "OF",
-    line3: "OAKRIDGE MUN",
-    badge: "XVI",
+    line3: "OAKRIDGE MUN XVI",
+    badge: "2026",
   },
   buttons: [
     { text: "Explore Committees", href: "/committees", style: "primary" as const },
@@ -69,7 +69,7 @@ export default function HeroContent() {
       <motion.div variants={itemVariants}>
         <Image
           src="/favicon.svg"
-          alt="Draft MUN Crest"
+          alt="Oakridge MUN Crest"
           width={200}
           height={200}
           className="mx-auto w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] drop-shadow-[0_0_60px_rgba(48,205,215,0.35)]"

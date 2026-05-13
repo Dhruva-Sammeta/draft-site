@@ -63,7 +63,7 @@ export const committeesData: Committee[] = [
     symbol: "IV",
     difficulty: "Advanced",
     agenda: "Historical/Strategic Crisis Simulation - Details Classified",
-    overview: "The Joint Crisis Committee splits delegates into two opposing cabinets that operate simultaneously. JCC 1 will represent one side of the conflict, requiring rapid strategic thinking, resource management, and creative crisis responses. This is one of the most intense committee experiences at Draft MUN, demanding quick wit and adaptability."
+    overview: "The Joint Crisis Committee splits delegates into two opposing cabinets that operate simultaneously. JCC 1 will represent one side of the conflict, requiring rapid strategic thinking, resource management, and creative crisis responses. This is one of the most intense committee experiences at Oakridge MUN, demanding quick wit and adaptability."
   },
   {
     slug: "jcc-2",

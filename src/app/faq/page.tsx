@@ -12,24 +12,24 @@ const FAQ_DATA = [
     category: "About the Conference",
     items: [
       {
-        q: "What is Draft MUN?",
-        a: "Draft Model United Nations (DraftMUN) is one of the largest and most prestigious high school MUN conferences in Asia. Organised by Draft International School, Gachibowli (a Nord Anglia Education institution), DraftMUN has run for sixteen consecutive years, hosting hundreds of delegates each edition across a wide range of UN and specialized committees."
+        q: "What is Oakridge MUN?",
+        a: "Oakridge Model United Nations (Oakridge MUN) is one of the largest and most prestigious high school MUN conferences in Asia. Organised by Oakridge International School, Gachibowli (a Nord Anglia Education institution), Oakridge MUN has run for sixteen consecutive years, hosting hundreds of delegates each edition across a wide range of UN and specialized committees."
       },
       {
         q: "What is Chapter XVI?",
-        a: "Chapter XVI is the sixteenth edition of Draft MUN. Each annual edition is referred to as a 'Chapter', continuing the legacy of diplomatic simulation, leadership development, and global awareness that the conference was founded on."
+        a: "Chapter XVI is the sixteenth edition of Oakridge MUN. Each annual edition is referred to as a 'Chapter', continuing the legacy of diplomatic simulation, leadership development, and global awareness that the conference was founded on."
       },
       {
         q: "When and where is the conference?",
-        a: "Chapter XVI takes place from July 24 to 26, 2026 at Draft International School, Gachibowli, Hyderabad, India. All committee sessions, meals, ceremonies, and socials are held on campus."
+        a: "Chapter XVI takes place from July 24 to 26, 2026 at Oakridge International School, Gachibowli, Hyderabad, India. All committee sessions, meals, ceremonies, and socials are held on campus."
       },
       {
         q: "How many delegates attend?",
-        a: "DraftMUN Chapter XVI will host over 650 delegates from schools across India and internationally, making it one of the largest high school MUN events in all of Asia."
+        a: "Oakridge MUN Chapter XVI will host over 650 delegates from schools across India and internationally, making it one of the largest high school MUN events in all of Asia."
       },
       {
-        q: "What makes DraftMUN different from other conferences?",
-        a: "DraftMUN stands apart through its scale, its 16-year legacy, its diverse committee slate of 20 committees spanning General Assembly, Crisis, Regional, Legal, and Specialized formats, and its location within a Nord Anglia international school environment. The conference is entirely student-led and is known for its rigorous academic standards and high-quality debate."
+        q: "What makes Oakridge MUN different from other conferences?",
+        a: "Oakridge MUN stands apart through its scale, its 16-year legacy, its diverse committee slate of 20 committees spanning General Assembly, Crisis, Regional, Legal, and Specialized formats, and its location within a Nord Anglia international school environment. The conference is entirely student-led and is known for its rigorous academic standards and high-quality debate."
       },
     ],
   },
@@ -63,7 +63,7 @@ const FAQ_DATA = [
     items: [
       {
         q: "How do I register?",
-        a: "Registration opens through the official Draft MUN registration portal. Head delegates should register their delegations, after which individual delegates will be assigned to committees. Visit the Register page for the latest registration link and deadlines."
+        a: "Registration opens through the official Oakridge MUN registration portal. Head delegates should register their delegations, after which individual delegates will be assigned to committees. Visit the Register page for the latest registration link and deadlines."
       },
       {
         q: "Is there a registration fee?",
@@ -75,11 +75,11 @@ const FAQ_DATA = [
       },
       {
         q: "What is the dress code?",
-        a: "DraftMUN follows a strict formal dress code: Western business formal (suit, blazer, tie) or formal ethnic attire. Delegates not adhering to the dress code may not be permitted into committee sessions."
+        a: "Oakridge MUN follows a strict formal dress code: Western business formal (suit, blazer, tie) or formal ethnic attire. Delegates not adhering to the dress code may not be permitted into committee sessions."
       },
       {
         q: "Is accommodation provided?",
-        a: "DraftMUN does not provide accommodation. However, recommended hotel options near the campus in Gachibowli will be shared with registered delegations. The venue is well-connected and centrally located in Hyderabad's IT corridor."
+        a: "Oakridge MUN does not provide accommodation. However, recommended hotel options near the campus in Gachibowli will be shared with registered delegations. The venue is well-connected and centrally located in Hyderabad's IT corridor."
       },
     ],
   },
@@ -88,7 +88,7 @@ const FAQ_DATA = [
     items: [
       {
         q: "What awards are given?",
-        a: "Awards at DraftMUN include Best Delegate, High Commendation, Special Mention, and Verbal Mention in each committee. Additionally, best delegation awards recognise schools with consistently outstanding performance across committees."
+        a: "Awards at Oakridge MUN include Best Delegate, High Commendation, Special Mention, and Verbal Mention in each committee. Additionally, best delegation awards recognise schools with consistently outstanding performance across committees."
       },
       {
         q: "How are delegates evaluated?",
@@ -148,7 +148,7 @@ export default function FAQPage() {
           <p className="section-kicker mb-3">Support</p>
           <h1 className="display-title">Frequently asked questions.</h1>
           <p className="body-large mt-4 max-w-2xl">
-            Everything you need to know about Draft MUN Chapter XVI. If your question isn&apos;t answered here, reach out via the Contact page.
+            Everything you need to know about Oakridge MUN Chapter XVI. If your question isn&apos;t answered here, reach out via the Contact page.
           </p>
         </div>
 

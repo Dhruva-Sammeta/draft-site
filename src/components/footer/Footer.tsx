@@ -32,7 +32,7 @@ export default function Footer() {
             <div className="mb-5">
               <Image
                 src="/favicon.svg"
-                alt="Draft MUN"
+                alt="Oakridge MUN"
                 width={52}
                 height={52}
                 className="drop-shadow-md"
@@ -76,10 +76,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-oakridge-teal/10 pt-8 md:flex-row">
           <p className="text-xs text-oakridge-muted">
-            &copy; {new Date().getFullYear()} Draft Model United Nations. All rights reserved.
+            &copy; {new Date().getFullYear()} Oakridge Model United Nations. All rights reserved.
           </p>
           <p className="text-xs text-oakridge-muted/60">
-            Chapter XVI - Draft International School, Gachibowli
+            Chapter XVI - Oakridge International School, Gachibowli
           </p>
         </div>
       </div>

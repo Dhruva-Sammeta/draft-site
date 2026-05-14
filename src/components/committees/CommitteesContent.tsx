@@ -25,6 +25,7 @@ const typeGroups = committeesData.reduce((acc, committee) => {
 }, {} as Record<string, typeof committeesData>);
 
 export default function CommitteesContent() {
+  const [activeFilter, setActiveFilter] = useState<string | null>(null);
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
 
   const activeCommittee = activeSlug
@@ -59,20 +60,21 @@ export default function CommitteesContent() {
           {/* Category filter pills */}
           <div className="flex flex-wrap gap-2">
             {typeOrder.filter((type) => typeGroups[type]).map((type) => (
-              <span
+              <button
                 key={type}
-                className="inline-flex items-center gap-1.5 rounded-full border border-oakridge-teal/20 bg-oakridge-paper/50 px-4 py-1.5 text-xs font-bold text-oakridge-muted"
+                onClick={() => setActiveFilter(activeFilter === type ? null : type)}
+                className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-1.5 text-xs font-bold transition-all hover:bg-oakridge-teal hover:border-oakridge-teal hover:text-oakridge-navy ${activeFilter === type ? "bg-oakridge-teal border-oakridge-teal text-oakridge-navy" : "border-oakridge-teal/20 bg-oakridge-paper/50 text-oakridge-muted"}`}
               >
                 {type}
-                <span className="text-oakridge-teal">{typeGroups[type].length}</span>
-              </span>
+                <span className={activeFilter === type ? "text-oakridge-navy/70" : "text-oakridge-teal"}>{typeGroups[type].length}</span>
+              </button>
             ))}
           </div>
         </div>
 
         {/* Committee List */}
         <div className="grid gap-4">
-          {committeesData.map((committee, index) => (
+          {(activeFilter ? committeesData.filter(c => c.type === activeFilter) : committeesData).map((committee, index) => (
             <CommitteeCard
               key={committee.slug}
               index={index}

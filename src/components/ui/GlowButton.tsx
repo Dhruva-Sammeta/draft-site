@@ -18,7 +18,7 @@ export default function GlowButton({
 }: GlowButtonProps) {
   const colors = {
     cyan: "border-oakridge-teal bg-oakridge-light-teal/40 text-oakridge-warm-white hover:bg-oakridge-teal",
-    gold: "border-oakridge-red bg-oakridge-red text-oakridge-warm-white hover:border-oakridge-teal hover:bg-oakridge-navy",
+    gold: "border-oakridge-gold bg-oakridge-gold text-oakridge-warm-white hover:border-oakridge-teal hover:bg-oakridge-navy",
   };
 
   return (

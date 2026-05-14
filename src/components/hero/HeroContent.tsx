@@ -84,7 +84,7 @@ export default function HeroContent() {
             href={HERO_CONFIG.alert.href}
             className="group inline-flex items-center gap-3 rounded-full border border-oakridge-teal/30 bg-oakridge-deep/50 px-6 py-2.5 backdrop-blur-md transition-all duration-300 hover:border-oakridge-teal/60 hover:bg-oakridge-deep/70 sm:px-8"
           >
-            <span className="h-2 w-2 rounded-full bg-oakridge-teal animate-pulse" />
+            <span className="h-2 w-2 rounded-full bg-oakridge-gold animate-pulse" />
             <span className="text-[11px] font-black uppercase tracking-[0.14em] text-oakridge-warm-white sm:text-xs">
               {HERO_CONFIG.alert.title}
             </span>
@@ -106,7 +106,7 @@ export default function HeroContent() {
         <h1 className="font-heading text-[clamp(32px,8vw,130px)] font-black leading-[1.05] tracking-[-0.03em] text-oakridge-warm-white">
           <span className="block drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]">{HERO_CONFIG.heading.line1}</span>
           <span className="block drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
-            <span className="text-oakridge-teal glow-text-cyan">{HERO_CONFIG.heading.highlight}</span>{" "}
+            <span className="text-oakridge-gold drop-shadow-[0_0_20px_rgba(212,168,67,0.4)]">{HERO_CONFIG.heading.highlight}</span>{" "}
             {HERO_CONFIG.heading.line2}
           </span>
           <span className="block drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]">{HERO_CONFIG.heading.line3}</span>
@@ -121,7 +121,7 @@ export default function HeroContent() {
             href={btn.href}
             className={`rounded-full px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] transition-all duration-300 sm:px-9 sm:py-4 sm:text-[13px] ${
               btn.style === "primary"
-                ? "bg-oakridge-teal text-oakridge-deep shadow-[0_4px_20px_rgba(48,205,215,0.25)] hover:bg-oakridge-light-teal hover:shadow-[0_4px_30px_rgba(48,205,215,0.4)]"
+                ? "bg-gradient-to-r from-oakridge-gold to-yellow-500 text-oakridge-deep shadow-[0_4px_20px_rgba(212,168,67,0.3)] hover:brightness-110 hover:shadow-[0_4px_35px_rgba(212,168,67,0.5)]"
                 : "border border-oakridge-warm-white/50 text-oakridge-warm-white backdrop-blur-sm hover:bg-oakridge-warm-white/10 hover:border-oakridge-warm-white"
             }`}
           >

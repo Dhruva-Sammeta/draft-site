@@ -64,7 +64,6 @@ export default function CommitteeDetail({ params }: { params: { slug: string } }
                 {committee.type}
               </span>
               <span className="rounded-full border border-oakridge-teal/15 bg-oakridge-paper px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-oakridge-muted">
-                {committee.delegateCount}
               </span>
             </div>
           </div>
@@ -107,7 +106,6 @@ export default function CommitteeDetail({ params }: { params: { slug: string } }
             <div className="grid grid-cols-3 gap-3 md:gap-4">
               {[
                 { label: "Type", value: committee.type },
-                { label: "Format", value: committee.delegateCount },
                 { label: "Chapter", value: "XVI" },
               ].map((detail) => (
                 <div

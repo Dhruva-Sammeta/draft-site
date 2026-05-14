@@ -24,7 +24,7 @@ export default function Button({
 
   const variants = {
     primary: "border-oakridge-teal bg-oakridge-teal text-oakridge-warm-white hover:border-oakridge-teal hover:bg-oakridge-teal hover:text-oakridge-warm-white",
-    gold: "border-oakridge-red bg-oakridge-red text-oakridge-warm-white hover:border-oakridge-teal hover:bg-oakridge-navy",
+    gold: "border-oakridge-gold bg-oakridge-gold text-oakridge-warm-white hover:border-oakridge-teal hover:bg-oakridge-navy",
     secondary: "border-oakridge-teal/20 bg-oakridge-deep text-oakridge-warm-white hover:border-oakridge-teal hover:bg-oakridge-teal/20",
     outline: "border-oakridge-teal/30 bg-transparent text-oakridge-warm-white hover:border-oakridge-teal hover:bg-oakridge-light-teal/35",
   };

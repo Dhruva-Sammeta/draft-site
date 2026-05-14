@@ -14,12 +14,6 @@ const itemVariants = {
   },
 };
 
-const glowColor = {
-  Beginner: "hover:shadow-[0_0_24px_rgba(74,222,128,0.18)] hover:border-green-400/40",
-  Intermediate: "hover:shadow-[0_0_24px_rgba(230,162,93,0.18)] hover:border-oakridge-orange/40",
-  Advanced: "hover:shadow-[0_0_24px_rgba(255,55,80,0.18)] hover:border-oakridge-red/40",
-};
-
 export default function CommitteePreviewSection() {
   const featured = committeesData.slice(0, 8);
 
@@ -37,7 +31,7 @@ export default function CommitteePreviewSection() {
         >
           <motion.div variants={itemVariants} className="mb-12 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="section-kicker mb-2">20 Committees</p>
+              <p className="section-kicker mb-2">19 Committees</p>
               <h2 className="font-sans text-3xl font-black tracking-[-0.04em] text-oakridge-warm-white md:text-5xl">
                 Find your committee.
               </h2>
@@ -56,7 +50,7 @@ export default function CommitteePreviewSection() {
               <motion.div key={committee.slug} variants={itemVariants}>
                 <Link
                   href={`/committees/${committee.slug}`}
-                  className={`group relative flex flex-col overflow-hidden rounded-2xl border border-oakridge-teal/15 bg-oakridge-paper/40 p-5 transition-all duration-300 h-full ${glowColor[committee.difficulty]}`}
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border border-oakridge-teal/15 bg-oakridge-paper/40 p-5 transition-all duration-300 h-full hover:shadow-[0_0_24px_rgba(212,168,67,0.18)] hover:border-oakridge-gold/40"
                 >
                   <span className="committee-numeral absolute -right-2 -top-4 text-7xl leading-none select-none">
                     {committee.symbol}

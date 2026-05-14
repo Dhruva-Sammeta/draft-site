@@ -38,7 +38,7 @@ export default function PhoenixSection() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="section-kicker mb-5">The Oakridge Phoenix</p>
+          
           <h2 className="font-heading text-4xl font-black tracking-[-0.03em] text-oakridge-warm-white md:text-6xl lg:text-7xl">
             <span className="italic text-oakridge-teal">Create.</span>{" "}
             Debate.{" "}
@@ -57,11 +57,6 @@ export default function PhoenixSection() {
             In an era defined by fracturing alliances, eroding institutions, and a global order under
             unprecedented strain, the need for young leaders who can think beyond borders has never
             been greater.
-          </p>
-          <p>
-            The phoenix is not decoration - it is a declaration. We rise from the ashes of
-            broken diplomacy, failed negotiations, and political deadlock not to inherit the
-            world as it is, but to reimagine it as it should be.
           </p>
           <p className="text-oakridge-warm-white/90 font-semibold">
             Sixteen years of Oakridge MUN have proven that the conference room is where the next

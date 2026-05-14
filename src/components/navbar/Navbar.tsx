@@ -61,9 +61,9 @@ export default function Navbar() {
         variants={navbarVariants}
         initial="hidden"
         animate="visible"
-        className="fixed top-5 left-1/2 -translate-x-1/2 z-[60] w-[calc(100%-2rem)] max-w-5xl"
+        className="fixed top-5 left-1/2 -translate-x-1/2 z-[60] w-[calc(100%-2rem)] max-w-6xl"
       >
-        <div className="glass-liquid glass-hover rounded-2xl px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between transition-all duration-500">
+        <div className="glass-liquid glass-hover rounded-2xl px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-4 xl:gap-8 transition-all duration-500">
           {/* Brand */}
           <Link href="/" className="flex items-center gap-2.5 group shrink-0">
             <Image
@@ -80,7 +80,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-0.5">
+          <div className="hidden lg:flex items-center gap-0.5">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.label}
@@ -105,7 +105,7 @@ export default function Navbar() {
           {/* Hamburger - mobile */}
           <button
             onClick={toggle}
-            className="md:hidden relative z-[70] w-11 h-11 flex flex-col items-center justify-center gap-1.5 group overflow-visible"
+            className="lg:hidden relative z-[70] w-11 h-11 flex flex-col items-center justify-center gap-1.5 group overflow-visible"
             aria-label="Toggle menu"
           >
             <motion.span
@@ -130,7 +130,7 @@ export default function Navbar() {
       {/* ── Mobile Side Panel Overlay ───────────────────────── */}
       <AnimatePresence>
         {isOpen && (
-          <div className="fixed inset-0 z-[65] md:hidden">
+          <div className="fixed inset-0 z-[65] lg:hidden">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}

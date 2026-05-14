@@ -10,12 +10,6 @@ interface CommitteeModalProps {
   onClose: () => void;
 }
 
-const difficultyBadge = {
-  Beginner: "border-green-400/30 bg-green-500/10 text-green-200",
-  Intermediate: "border-oakridge-orange/40 bg-oakridge-orange/10 text-oakridge-light-teal",
-  Advanced: "border-oakridge-red/40 bg-oakridge-red/10 text-oakridge-warm-white",
-};
-
 export default function CommitteeModal({ committee, onClose }: CommitteeModalProps) {
   useEffect(() => {
     if (!committee) return;
@@ -83,7 +77,7 @@ export default function CommitteeModal({ committee, onClose }: CommitteeModalPro
               <button
                 type="button"
                 onClick={onClose}
-                className="rounded-full border border-oakridge-teal/30 bg-oakridge-deep/70 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-oakridge-warm-white transition-colors hover:border-oakridge-teal hover:text-oakridge-teal"
+                className="rounded-full border border-oakridge-gold/30 bg-oakridge-deep/70 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-oakridge-warm-white transition-colors hover:border-oakridge-gold hover:text-oakridge-gold"
               >
                 Close
               </button>
@@ -99,13 +93,9 @@ export default function CommitteeModal({ committee, onClose }: CommitteeModalPro
                 </div>
 
                 <div className="rounded-2xl border border-oakridge-teal/15 bg-oakridge-navy/60 p-5">
-                  <p className="section-kicker mb-2">Intent</p>
+                  <p className="section-kicker mb-2">Background & Focus</p>
                   <p className="text-sm leading-relaxed text-oakridge-muted">{committee.overview}</p>
-                </div>
-
-                <div className="rounded-2xl border border-oakridge-teal/15 bg-oakridge-navy/60 p-5">
-                  <p className="section-kicker mb-2">Focus</p>
-                  <p className="text-sm leading-relaxed text-oakridge-muted">{committee.description}</p>
+                  <p className="text-sm leading-relaxed text-oakridge-muted mt-2">{committee.description}</p>
                 </div>
               </div>
 
@@ -115,13 +105,8 @@ export default function CommitteeModal({ committee, onClose }: CommitteeModalPro
                     {committee.symbol}
                   </span>
                   <div>
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-oakridge-muted">Difficulty</p>
-                    <span
-                      className={`mt-2 inline-flex items-center rounded-full border px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] ${
-                        difficultyBadge[committee.difficulty]
-                      }`}
-                    >
-                      {committee.difficulty}
+                    <span className="inline-flex items-center rounded-full border px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] border-oakridge-teal/40 bg-oakridge-teal/10 text-oakridge-teal">
+                      Chapter XVI
                     </span>
                   </div>
                 </div>
@@ -129,8 +114,6 @@ export default function CommitteeModal({ committee, onClose }: CommitteeModalPro
                 <div className="grid grid-cols-2 gap-3">
                   {[
                     { label: "Type", value: committee.type },
-                    { label: "Format", value: committee.delegateCount },
-                    { label: "Chapter", value: "XVI" },
                     { label: "Symbol", value: committee.symbol },
                   ].map((detail) => (
                     <div
@@ -164,7 +147,7 @@ export default function CommitteeModal({ committee, onClose }: CommitteeModalPro
 
                 <Link
                   href={`/committees/${committee.slug}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-oakridge-teal/30 bg-oakridge-deep/70 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-oakridge-teal transition-colors hover:border-oakridge-teal hover:text-oakridge-light-teal"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-oakridge-gold/30 bg-oakridge-deep/70 w-full py-2 text-xs font-black uppercase tracking-[0.18em] text-oakridge-gold transition-colors hover:border-oakridge-gold hover:text-oakridge-gold"
                 >
                   Full Page
                   <span aria-hidden="true">&rarr;</span>

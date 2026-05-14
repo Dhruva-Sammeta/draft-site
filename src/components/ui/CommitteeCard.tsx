@@ -10,20 +10,12 @@ interface CommitteeCardProps extends Committee {
   onOpen?: (slug: string) => void;
 }
 
-const glowColor = {
-  Beginner: "group-hover:shadow-[0_0_20px_rgba(74,222,128,0.15)] group-hover:border-green-400/30",
-  Intermediate: "group-hover:shadow-[0_0_20px_rgba(230,162,93,0.15)] group-hover:border-oakridge-orange/30",
-  Advanced: "group-hover:shadow-[0_0_20px_rgba(255,55,80,0.15)] group-hover:border-oakridge-red/30",
-};
-
 export default function CommitteeCard({
   name,
   fullName,
   type,
-  delegateCount,
   slug,
   symbol,
-  difficulty,
   agenda,
   index,
   onOpen,
@@ -47,13 +39,13 @@ export default function CommitteeCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-70px" }}
       transition={{ duration: 0.65, delay: index * 0.03, ease: [0.22, 1, 0.36, 1] }}
-      className={`group mx-auto w-full max-w-6xl rounded-2xl border border-oakridge-teal/15 bg-oakridge-paper/40 shadow-[0_12px_30px_rgba(1,8,14,0.25)] transition-all duration-300 hover:bg-oakridge-warm-white hover:scale-[1.012] hover:shadow-[0_18px_36px_rgba(1,8,14,0.3)] hover:-translate-y-0.5 hover:border-transparent hover:z-10 ${glowColor[difficulty]}`}
+      className={`group mx-auto w-full max-w-6xl rounded-2xl border border-oakridge-teal/15 bg-oakridge-paper/40 shadow-[0_12px_30px_rgba(1,8,14,0.25)] transition-all duration-300 hover:bg-oakridge-warm-white hover:scale-[1.012] hover:shadow-[0_18px_36px_rgba(1,8,14,0.3)] hover:-translate-y-0.5 hover:border-transparent hover:z-10 group-hover:shadow-[0_0_20px_rgba(212,168,67,0.15)] group-hover:border-oakridge-gold/30`}
     >
       <Wrapper
         {...wrapperProps}
-        className="grid w-full min-h-[130px] grid-cols-[50px_1fr] items-center gap-4 px-4 py-6 text-left md:grid-cols-[60px_48px_minmax(200px,0.4fr)_1fr_auto] md:gap-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oakridge-teal/60 focus-visible:ring-offset-2 focus-visible:ring-offset-oakridge-navy"
+        className="grid w-full min-h-[130px] grid-cols-[50px_1fr] items-center gap-4 px-4 py-6 text-left md:grid-cols-[60px_48px_minmax(200px,0.4fr)_1fr] md:gap-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oakridge-teal/60 focus-visible:ring-offset-2 focus-visible:ring-offset-oakridge-navy"
       >
-        <span className="font-mono text-sm font-black text-oakridge-red group-hover:text-oakridge-red">{number}.</span>
+        <span className="font-mono text-sm font-black text-oakridge-gold group-hover:text-oakridge-gold">{number}.</span>
         <span className="hidden md:block text-lg font-black italic text-oakridge-teal/40 tracking-wide group-hover:text-oakridge-dark-teal">
           {symbol}
         </span>
@@ -70,7 +62,6 @@ export default function CommitteeCard({
           <p className="text-sm leading-relaxed text-oakridge-muted group-hover:text-oakridge-navy/60 hidden md:block">{fullName}</p>
           <p className="mt-1 text-xs text-oakridge-teal/60 group-hover:text-oakridge-dark-teal line-clamp-1 hidden md:block">Agenda: {agenda}</p>
         </div>
-        <span className="col-start-2 md:col-start-auto text-[10px] font-bold text-oakridge-muted group-hover:text-oakridge-navy/50">{delegateCount}</span>
       </Wrapper>
     </motion.article>
   );

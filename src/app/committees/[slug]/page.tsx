@@ -59,13 +59,9 @@ export default function CommitteeDetail({ params }: { params: { slug: string } }
             <span className="flex h-14 w-14 items-center justify-center rounded-xl border border-oakridge-teal/20 bg-oakridge-paper text-xl font-black italic text-oakridge-teal">
               {committee.symbol}
             </span>
-            <div className="flex flex-wrap gap-2">
-              <span className="rounded-full border border-oakridge-teal/15 bg-oakridge-paper px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-oakridge-dark-teal">
-                {committee.type}
-              </span>
-              <span className="rounded-full border border-oakridge-teal/15 bg-oakridge-paper px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-oakridge-muted">
-              </span>
-            </div>
+            <span className="rounded-full border border-oakridge-teal/15 bg-oakridge-paper px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-oakridge-dark-teal">
+              {committee.type}
+            </span>
           </div>
           <h1 className="display-title">{committee.name}</h1>
           <p className="body-large mt-3 text-oakridge-teal font-semibold">{committee.fullName}</p>
@@ -107,6 +103,7 @@ export default function CommitteeDetail({ params }: { params: { slug: string } }
               {[
                 { label: "Type", value: committee.type },
                 { label: "Chapter", value: "XVI" },
+                { label: "Symbol", value: committee.symbol },
               ].map((detail) => (
                 <div
                   key={detail.label}

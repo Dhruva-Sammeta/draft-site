@@ -49,16 +49,25 @@ export default function CommitteesContent() {
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-16">
-          <div className="mb-8 flex flex-col gap-4 md:grid md:grid-cols-[0.5fr_1fr_0.7fr] md:items-end md:gap-6">
-            <p className="section-kicker">Chapter XVI / {committeesData.length} Committees</p>
-            <h1 className="display-title">Conference committees.</h1>
-            <p className="body-large">
+          <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <p className="section-kicker">Chapter XVI / {committeesData.length} Committees</p>
+              <h1 className="display-title">Conference committees.</h1>
+            </div>
+            <p className="body-large max-w-md md:text-right">
               From General Assembly to fast-paced crisis simulations, discover the full committee slate for this year&apos;s conference.
             </p>
           </div>
 
           {/* Category filter pills */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              onClick={() => setActiveFilter(null)}
+              className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-1.5 text-xs font-bold transition-all hover:bg-oakridge-teal hover:border-oakridge-teal hover:text-oakridge-navy ${activeFilter === null ? "bg-oakridge-teal border-oakridge-teal text-oakridge-navy" : "border-oakridge-teal/20 bg-oakridge-paper/50 text-oakridge-muted"}`}
+            >
+              All
+              <span className={activeFilter === null ? "text-oakridge-navy/70" : "text-oakridge-teal"}>{committeesData.length}</span>
+            </button>
             {typeOrder.filter((type) => typeGroups[type]).map((type) => (
               <button
                 key={type}

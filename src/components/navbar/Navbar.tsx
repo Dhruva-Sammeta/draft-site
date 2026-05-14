@@ -61,7 +61,7 @@ export default function Navbar() {
         variants={navbarVariants}
         initial="hidden"
         animate="visible"
-        className="fixed top-5 left-1/2 -translate-x-1/2 z-[60] w-[calc(100%-2rem)] max-w-6xl"
+        className="fixed top-5 left-1/2 -translate-x-1/2 z-[60] w-[calc(100%-2rem)] max-w-7xl"
       >
         <div className="glass-liquid glass-hover rounded-2xl px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-4 xl:gap-8 transition-all duration-500">
           {/* Brand */}
@@ -80,12 +80,12 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden lg:flex items-center gap-0.5">
+          <div className="hidden lg:flex items-center gap-0">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className={`relative px-3 py-2 text-[13px] font-semibold transition-colors duration-300 group ${
+                className={`relative px-2.5 py-2 text-[12px] font-semibold transition-colors duration-300 group ${
                   pathname === item.href ? "text-oakridge-warm-white" : "text-oakridge-muted hover:text-oakridge-warm-white"
                 }`}
               >

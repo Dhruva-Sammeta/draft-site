@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -23,6 +23,11 @@ const navbarVariants = {
     opacity: 1,
     transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const, delay: 0.3 },
   },
+  scrolledAway: {
+    y: -120,
+    opacity: 0,
+    transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] as const },
+  },
 };
 
 const mobileItemVariants = {
@@ -40,6 +45,8 @@ const mobileItemVariants = {
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const lastScroll = useRef(0);
   const toggle = useCallback(() => setIsOpen((prev) => !prev), []);
   const pathname = usePathname();
 
@@ -51,16 +58,40 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        const current = window.scrollY;
+        const movingDown = current > lastScroll.current + 8;
+        const movingUp = current < lastScroll.current - 8;
+
+        if (!isOpen && current > 160 && movingDown) setIsHidden(true);
+        if (movingUp || current < 80) setIsHidden(false);
+
+        lastScroll.current = current;
+        raf = 0;
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, [isOpen]);
+
   return (
     <>
       {/* ── Top nav bar ─────────────────────────────────────── */}
       <motion.nav
         variants={navbarVariants}
         initial="hidden"
-        animate="visible"
+        animate={isHidden ? "scrolledAway" : "visible"}
         className="fixed left-1/2 top-[calc(env(safe-area-inset-top)+0.75rem)] z-[80] w-[calc(100%-1.25rem)] max-w-[var(--content)] -translate-x-1/2 sm:top-[calc(env(safe-area-inset-top)+1rem)] sm:w-[calc(100%-2rem)]"
       >
-        <div className="glass-liquid glass-hover flex min-h-[64px] items-center justify-between gap-2 rounded-2xl px-3 py-2.5 transition-all duration-500 sm:min-h-[72px] sm:px-5 sm:py-3 lg:px-6 xl:gap-6">
+        <div className="flex min-h-[64px] items-center justify-between gap-2 rounded-2xl border border-oakridge-light-teal/20 bg-oakridge-navy px-3 py-2.5 transition-colors duration-300 sm:min-h-[72px] sm:px-5 sm:py-3 lg:px-6 xl:gap-6">
           {/* Brand */}
           <Link href="/" className="group flex min-w-0 shrink-0 items-center gap-2.5">
             <Image
@@ -68,7 +99,7 @@ export default function Navbar() {
               alt="Oakridge MUN Crest"
               width={32}
               height={32}
-              className="h-10 w-10 shrink-0 drop-shadow-md sm:h-11 sm:w-11"
+              className="h-10 w-10 shrink-0 sm:h-11 sm:w-11"
               priority
             />
             <span className="truncate text-[clamp(0.78rem,3.8vw,1rem)] font-black uppercase tracking-[0.07em] text-oakridge-warm-white transition-colors duration-300 group-hover:text-oakridge-teal sm:tracking-[0.08em]">
@@ -102,7 +133,7 @@ export default function Navbar() {
           {/* Hamburger - mobile */}
           <button
             onClick={toggle}
-            className="group relative z-[90] flex h-11 w-11 shrink-0 flex-col items-center justify-center gap-1.5 overflow-visible rounded-full border border-oakridge-teal/10 bg-oakridge-deep/20 lg:hidden"
+            className="group relative z-[90] flex h-11 w-11 shrink-0 flex-col items-center justify-center gap-1.5 overflow-visible rounded-full border border-oakridge-light-teal/20 bg-oakridge-deep/55 lg:hidden"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
@@ -135,7 +166,7 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="absolute inset-0 bg-oakridge-ink/72 backdrop-blur-md"
+              className="absolute inset-0 bg-oakridge-navy/72"
             />
 
             {/* Rounded menu panel, offset below the fixed nav */}
@@ -144,7 +175,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, clipPath: "inset(0 0 0% 0 round 24px)" }}
               exit={{ opacity: 0, y: -10, clipPath: "inset(0 0 100% 0 round 24px)" }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="glass-liquid absolute inset-x-3 bottom-3 top-[var(--nav-safe)] flex flex-col overflow-y-auto rounded-[24px] p-6"
+              className="absolute inset-x-3 bottom-3 top-[var(--nav-safe)] flex flex-col overflow-y-auto rounded-[24px] border border-oakridge-navy/14 bg-oakridge-warm-white p-6"
             >
               <div className="mb-8 flex items-center gap-4">
                 <Image
@@ -152,10 +183,10 @@ export default function Navbar() {
                   alt="Oakridge MUN"
                   width={64}
                   height={64}
-                  className="h-14 w-14 shrink-0 drop-shadow-xl"
+                  className="h-14 w-14 shrink-0"
                 />
                 <div>
-                  <h3 className="text-oakridge-warm-white font-black text-xl tracking-wider uppercase leading-tight">
+                  <h3 className="text-oakridge-navy font-black text-xl tracking-wider uppercase leading-tight">
                     OAKRIDGE MUN
                   </h3>
                   <p className="text-oakridge-teal font-black text-sm tracking-[0.2em] uppercase">
@@ -180,7 +211,7 @@ export default function Navbar() {
                       className={`group flex items-center gap-4 text-lg font-bold tracking-wide transition-all duration-300 ${
                         pathname === item.href
                           ? "text-oakridge-teal"
-                          : "text-oakridge-warm-white hover:text-oakridge-teal"
+                          : "text-oakridge-navy hover:text-oakridge-dark-teal"
                       }`}
                     >
                       <span className={`w-1.5 h-1.5 rounded-full bg-oakridge-teal transition-all duration-300 ${
@@ -193,11 +224,11 @@ export default function Navbar() {
               </nav>
 
               <div className="mt-10">
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-oakridge-muted mb-4">
+                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-oakridge-navy/55 mb-4">
                   Conference Dates
                 </p>
-                <div className="rounded-xl border border-oakridge-teal/20 bg-oakridge-paper/50 p-4">
-                  <p className="text-oakridge-warm-white font-bold text-sm">
+                <div className="rounded-xl border border-oakridge-navy/14 bg-white p-4">
+                  <p className="text-oakridge-navy font-bold text-sm">
                     July 24-26, 2026
                   </p>
                   <p className="text-oakridge-teal text-[11px] font-black uppercase tracking-wider mt-1">

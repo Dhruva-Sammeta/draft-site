@@ -21,7 +21,7 @@ const itemVariants = {
 
 export default function StatsSection() {
   return (
-    <section className="site-section border-y border-oakridge-teal/10 py-16 md:py-24">
+    <section className="site-section border-y border-oakridge-navy/10 py-16 md:py-24">
       <div className="mx-auto max-w-[var(--content)] px-4 sm:px-6">
         <motion.div
           initial="hidden"
@@ -39,11 +39,11 @@ export default function StatsSection() {
               variants={itemVariants}
               className="glass-liquid flex min-h-[156px] flex-col items-center justify-center rounded-2xl p-6 text-center md:min-h-[180px] md:p-8"
             >
-              <span className="font-sans text-5xl font-black leading-none text-oakridge-teal md:text-6xl">
+              <span className="font-sans text-5xl font-black leading-none text-oakridge-dark-teal md:text-6xl">
                 {stat.value}
-                <span className="text-oakridge-warm-white">{stat.suffix}</span>
+                <span className="text-oakridge-red">{stat.suffix}</span>
               </span>
-              <span className="mt-3 text-[11px] font-black uppercase tracking-[0.2em] text-oakridge-muted">
+              <span className="mt-3 text-[11px] font-black uppercase tracking-[0.2em] text-oakridge-navy/58">
                 {stat.label}
               </span>
             </motion.div>

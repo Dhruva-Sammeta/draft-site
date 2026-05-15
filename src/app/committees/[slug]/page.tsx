@@ -46,12 +46,12 @@ export default async function CommitteeDetail({ params }: { params: Promise<{ sl
 
       <div className="relative z-10 mx-auto max-w-[var(--content)] px-4 sm:px-6">
         {/* Breadcrumb */}
-        <nav className="mb-8 flex items-center gap-2 text-sm text-oakridge-muted">
+        <nav className="mb-8 flex items-center gap-2 text-sm text-oakridge-navy/60">
           <Link href="/committees" className="hover:text-oakridge-teal transition-colors">
             Committees
           </Link>
           <span className="text-oakridge-teal/40">/</span>
-          <span className="text-oakridge-warm-white font-semibold">{committee.name}</span>
+          <span className="text-oakridge-navy font-semibold">{committee.name}</span>
         </nav>
 
         {/* Header */}
@@ -87,10 +87,10 @@ export default async function CommitteeDetail({ params }: { params: Promise<{ sl
                   {committee.symbol}
                 </span>
                 <div>
-                  <h2 className="font-sans text-2xl font-black tracking-[-0.04em] text-oakridge-warm-white md:text-3xl">
+              <h2 className="font-sans text-2xl font-black tracking-[-0.04em] text-oakridge-navy md:text-3xl">
                     {committee.agenda}
                   </h2>
-                  <p className="mt-3 text-sm text-oakridge-muted">
+              <p className="mt-3 text-sm text-oakridge-navy/65">
                     Delegates are expected to research this agenda thoroughly and come prepared with a comprehensive understanding of their portfolio country&apos;s position.
                   </p>
                 </div>
@@ -109,12 +109,12 @@ export default async function CommitteeDetail({ params }: { params: Promise<{ sl
               ].map((detail) => (
                 <div
                   key={detail.label}
-                  className="rounded-xl border border-oakridge-teal/10 bg-oakridge-navy p-4 text-center"
+                  className="rounded-xl border border-oakridge-navy/10 bg-white p-4 text-center"
                 >
                   <span className="block text-[10px] font-black uppercase tracking-[0.2em] text-oakridge-teal">
                     {detail.label}
                   </span>
-                  <span className="mt-2 block font-sans text-lg font-bold text-oakridge-warm-white">
+                  <span className="mt-2 block font-sans text-lg font-bold text-oakridge-navy">
                     {detail.value}
                   </span>
                 </div>
@@ -129,14 +129,14 @@ export default async function CommitteeDetail({ params }: { params: Promise<{ sl
               {chairs.map((chair) => (
                 <div
                   key={`${committee.slug}-${chair.role}`}
-                  className="flex items-center gap-4 rounded-[22px] border border-oakridge-teal/15 bg-oakridge-navy p-5"
+                  className="flex items-center gap-4 rounded-[22px] border border-oakridge-navy/12 bg-white p-5"
                 >
                   <div className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-oakridge-paper font-black text-oakridge-teal text-lg">
                     EB
                   </div>
                   <div>
-                    <h3 className="font-sans text-lg font-black text-oakridge-warm-white">{chair.name}</h3>
-                    <p className="text-sm text-oakridge-muted">{chair.role}</p>
+                    <h3 className="font-sans text-lg font-black text-oakridge-navy">{chair.name}</h3>
+                    <p className="text-sm text-oakridge-navy/62">{chair.role}</p>
                   </div>
                 </div>
               ))}
@@ -170,7 +170,7 @@ export default async function CommitteeDetail({ params }: { params: Promise<{ sl
               <span className="text-oakridge-teal/50 group-hover:text-oakridge-teal transition-colors">&larr;</span>
               <div>
                 <span className="block text-[10px] font-black uppercase tracking-[0.15em] text-oakridge-muted">Previous</span>
-                <span className="block font-sans text-lg font-bold text-oakridge-warm-white group-hover:text-oakridge-teal transition-colors">
+                <span className="block font-sans text-lg font-bold text-oakridge-navy group-hover:text-oakridge-dark-teal transition-colors">
                   {prevCommittee.name}
                 </span>
               </div>
@@ -183,7 +183,7 @@ export default async function CommitteeDetail({ params }: { params: Promise<{ sl
             >
               <div>
                 <span className="block text-[10px] font-black uppercase tracking-[0.15em] text-oakridge-muted">Next</span>
-                <span className="block font-sans text-lg font-bold text-oakridge-warm-white group-hover:text-oakridge-teal transition-colors">
+                <span className="block font-sans text-lg font-bold text-oakridge-navy group-hover:text-oakridge-dark-teal transition-colors">
                   {nextCommittee.name}
                 </span>
               </div>

@@ -9,9 +9,6 @@ export default function PhoenixSection() {
     <section 
       className="site-section py-20 sm:py-28 md:py-36"
     >
-      {/* Ambient glow */}
-      <div className="pointer-events-none absolute left-1/2 top-[38%] h-[min(80vw,640px)] w-[min(80vw,640px)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-oakridge-teal/[0.08] blur-3xl" />
-
       <div className="relative z-10 mx-auto flex max-w-[var(--content)] flex-col items-center px-4 text-center sm:px-6">
         {/* Phoenix image */}
         <motion.div
@@ -19,7 +16,7 @@ export default function PhoenixSection() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="phoenix-float media-glass mb-10 rounded-[2rem] p-5 sm:mb-12 sm:rounded-[2.5rem] sm:p-8"
+          className="media-glass mb-10 rounded-[2rem] p-5 sm:mb-12 sm:rounded-[2.5rem] sm:p-8"
         >
           <Image
             src="/media/phoenix.png"
@@ -38,10 +35,10 @@ export default function PhoenixSection() {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
           
-          <h2 className="font-heading text-4xl font-black tracking-[-0.04em] text-oakridge-warm-white md:text-6xl lg:text-7xl">
-            <span className="italic text-oakridge-teal">Create.</span>{" "}
+          <h2 className="font-heading text-4xl font-black tracking-[-0.04em] text-oakridge-navy md:text-6xl lg:text-7xl">
+            <span className="italic text-oakridge-dark-teal">Create.</span>{" "}
             Debate.{" "}
-            <span className="text-oakridge-teal">Innovate.</span>
+            <span className="text-oakridge-red">Innovate.</span>
           </h2>
         </motion.div>
 
@@ -50,14 +47,14 @@ export default function PhoenixSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="glass-liquid mx-auto mt-7 max-w-3xl space-y-5 rounded-[2rem] px-5 py-7 text-base leading-relaxed text-oakridge-muted sm:mt-8 sm:px-8 sm:py-8 sm:text-lg"
+          className="glass-liquid mx-auto mt-7 max-w-3xl space-y-5 rounded-[2rem] px-5 py-7 text-base leading-relaxed text-oakridge-navy/72 sm:mt-8 sm:px-8 sm:py-8 sm:text-lg"
         >
           <p>
             In an era defined by fracturing alliances, eroding institutions, and a global order under
             unprecedented strain, the need for young leaders who can think beyond borders has never
             been greater.
           </p>
-          <p className="text-oakridge-warm-white/90 font-semibold">
+          <p className="text-oakridge-navy font-semibold">
             Sixteen years of Oakridge MUN have proven that the conference room is where the next
             generation of diplomats, policymakers, and changemakers find their voice. Chapter XVI
             continues that tradition - sharper, bolder, and more urgent than ever.

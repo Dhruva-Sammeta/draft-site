@@ -25,7 +25,7 @@ export default function ResourcesPage() {
         </div>
         <div className="thin-panel px-5 py-8 text-center sm:px-8 sm:py-10">
           <p className="section-kicker">Updates soon</p>
-          <h2 className="mt-3 font-sans text-2xl font-black tracking-[-0.04em] text-oakridge-warm-white sm:text-3xl">
+          <h2 className="mt-3 font-sans text-2xl font-black tracking-[-0.04em] text-oakridge-navy sm:text-3xl">
             Resources will be released shortly.
           </h2>
           <p className="body-large mt-4">

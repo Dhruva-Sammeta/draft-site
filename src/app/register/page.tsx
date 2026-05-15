@@ -30,10 +30,10 @@ export default function RegisterPage() {
           </div>
           <div className="self-center">
             <p className="section-kicker">Opening Soon</p>
-            <h2 className="font-sans text-2xl font-black tracking-[-0.05em] text-oakridge-warm-white sm:text-4xl md:text-6xl">
+            <h2 className="font-sans text-2xl font-black tracking-[-0.05em] text-oakridge-navy sm:text-4xl md:text-6xl">
               Registration portal is being finalized.
             </h2>
-            <p className="mt-5 leading-relaxed text-oakridge-muted">
+            <p className="mt-5 leading-relaxed text-oakridge-navy/68">
               Please check back shortly or follow our official channels for the exact launch date.
             </p>
             <div className="mt-7 grid grid-cols-3 overflow-hidden rounded-[20px] border border-oakridge-teal/15">
@@ -43,8 +43,8 @@ export default function RegisterPage() {
                 ["XVI", "Chapter"],
               ].map(([value, label]) => (
                 <div key={label} className="border-r border-oakridge-teal/10 p-4 text-center last:border-r-0">
-                  <strong className="block font-sans text-2xl font-black text-oakridge-warm-white">{value}</strong>
-                  <span className="text-[10px] font-black uppercase tracking-[0.18em] text-oakridge-muted">
+                  <strong className="block font-sans text-2xl font-black text-oakridge-navy">{value}</strong>
+                  <span className="text-[10px] font-black uppercase tracking-[0.18em] text-oakridge-navy/58">
                     {label}
                   </span>
                 </div>

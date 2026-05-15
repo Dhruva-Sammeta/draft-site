@@ -51,10 +51,10 @@ export default function ContactPage() {
               <p className="mb-1 text-[11px] font-black uppercase tracking-[0.22em] text-oakridge-dark-teal">
                 Email us
               </p>
-              <p className="font-sans text-xl font-black tracking-[-0.03em] text-oakridge-warm-white group-hover:text-oakridge-teal transition-colors">
+              <p className="font-sans text-xl font-black tracking-[-0.03em] text-oakridge-navy group-hover:text-oakridge-dark-teal transition-colors">
                 {CONTACT_EMAIL}
               </p>
-              <p className="mt-2 text-sm text-oakridge-muted">
+              <p className="mt-2 text-sm text-oakridge-navy/65">
                 Send us a mail and we&apos;ll respond within 48 hours.
               </p>
             </div>
@@ -88,10 +88,10 @@ export default function ContactPage() {
               <p className="mb-1 text-[11px] font-black uppercase tracking-[0.22em] text-oakridge-dark-teal">
                 DM us on Instagram
               </p>
-              <p className="font-sans text-xl font-black tracking-[-0.03em] text-oakridge-warm-white group-hover:text-oakridge-teal transition-colors">
+              <p className="font-sans text-xl font-black tracking-[-0.03em] text-oakridge-navy group-hover:text-oakridge-dark-teal transition-colors">
                 @oakmun.official
               </p>
-              <p className="mt-2 text-sm text-oakridge-muted">
+              <p className="mt-2 text-sm text-oakridge-navy/65">
                 Slide into our DMs for quick queries, updates, and announcements.
               </p>
             </div>
@@ -102,7 +102,7 @@ export default function ContactPage() {
         </div>
 
         {/* Bottom note */}
-        <p className="mt-12 text-center text-sm text-oakridge-muted">
+        <p className="mt-12 text-center text-sm text-oakridge-navy/60">
           We typically respond within 24–48 hours. For urgent matters, Instagram DMs are faster.
         </p>
       </div>

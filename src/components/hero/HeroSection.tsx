@@ -22,7 +22,7 @@ export default function HeroSection() {
         {/* Cinematic overlay stack */}
         <div className="absolute inset-0 bg-hero-gradient opacity-92" />
         <div className="absolute inset-0 bg-oakridge-deep/40" />
-        <div className="absolute inset-x-[7vw] top-[12vh] bottom-[11vh] rounded-[var(--radius)] border border-oakridge-teal/10 glass-frosted opacity-85" />
+        <div className="absolute inset-x-3 top-[10vh] bottom-[8vh] rounded-[2rem] border border-oakridge-teal/10 glass-frosted opacity-85 sm:inset-x-5 sm:top-[11vh] sm:bottom-[9vh] lg:inset-x-[7vw] lg:top-[12vh] lg:bottom-[11vh] lg:rounded-[var(--radius)]" />
       </div>
 
       {/* Subtle animated vignette border */}
@@ -38,7 +38,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.8 }}
-        className="absolute inset-0 z-[2] pointer-events-none mx-6 rounded-[2rem] glass-liquid"
+        className="absolute inset-x-3 inset-y-3 z-[2] pointer-events-none rounded-[1.75rem] glass-liquid sm:inset-x-5 sm:inset-y-5 lg:inset-x-6 lg:inset-y-6"
       />
 
       {/* Ambient glow orbs */}

@@ -56,7 +56,7 @@ export default function CommitteeModal({ committee, onClose }: CommitteeModalPro
             role="dialog"
             aria-modal="true"
             aria-labelledby={`committee-title-${committee.slug}`}
-            className="relative w-full max-w-4xl overflow-hidden rounded-3xl glass-liquid shadow-[0_35px_90px_rgba(1,8,14,0.7)] flex max-h-[90vh] flex-col"
+            className="relative flex max-h-[90vh] w-full max-w-[var(--content-narrow)] flex-col overflow-hidden rounded-3xl glass-liquid shadow-[0_35px_90px_rgba(1,8,14,0.7)]"
             initial={{ y: 30, opacity: 0, scale: 0.98 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: 20, opacity: 0, scale: 0.98 }}

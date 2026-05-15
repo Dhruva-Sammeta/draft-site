@@ -18,7 +18,7 @@
   --color-oakridge-orange: #e6a25d;
   --color-oakridge-ink: #01080e;
   --color-oakridge-muted: #82a0b3;
-  --color-oakridge-gold: #d4a843;
+  --color-oakridge-gold: #BC9A6E;
 
   /* Font */
   --font-sans: var(--font-montserrat);
@@ -35,15 +35,17 @@
   --glass-bg-strong: rgba(5, 25, 41, 0.84);
   --glass-border: rgba(48, 205, 215, 0.16);
   --glass-border-hover: rgba(48, 205, 215, 0.34);
-  --glass-gold-border: rgba(212, 168, 67, 0.28);
-  --glass-gold-border-hover: rgba(212, 168, 67, 0.5);
+  --glass-gold-border: rgba(188, 154, 110, 0.28);
+  --glass-gold-border-hover: rgba(188, 154, 110, 0.5);
   --glow-teal: rgba(48, 205, 215, 0.38);
-  --glow-gold: rgba(212, 168, 67, 0.34);
+  --glow-gold: rgba(188, 154, 110, 0.34);
   --muted: rgba(130, 160, 179, 0.8);
   --line: rgba(48, 205, 215, 0.14);
   --pad: clamp(18px, 4.8vw, 96px);
   --nav: clamp(88px, 7vw, 132px);
   --radius: clamp(30px, 6vw, 128px);
+  --content: min(calc(100vw - clamp(1.5rem, 4vw, 4rem)), 84rem);
+  --content-narrow: min(calc(100vw - clamp(1.5rem, 4vw, 4rem)), 72rem);
 }
 
 /* ============================================
@@ -103,7 +105,7 @@ body {
 
 .display-title {
   font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
-  font-size: clamp(2.8rem, 5vw, 5.6rem);
+  font-size: clamp(2.6rem, 5vw, 5.6rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 0.96;
@@ -245,7 +247,7 @@ body {
 .glass-gold {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.02) 18%, rgba(10, 20, 28, 0.82) 100%),
-    radial-gradient(circle at top left, rgba(212, 168, 67, 0.18), transparent 34%),
+    radial-gradient(circle at top left, rgba(188, 154, 110, 0.18), transparent 34%),
     radial-gradient(circle at bottom right, rgba(48, 205, 215, 0.08), transparent 34%),
     rgba(5, 25, 41, 0.86);
   backdrop-filter: blur(22px) saturate(1.45);
@@ -253,9 +255,9 @@ body {
   border: 1px solid var(--glass-gold-border);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.08),
-    inset 0 -1px 0 rgba(212, 168, 67, 0.08),
+    inset 0 -1px 0 rgba(188, 154, 110, 0.08),
     0 16px 36px rgba(0, 0, 0, 0.32),
-    0 0 0 1px rgba(212, 168, 67, 0.04);
+    0 0 0 1px rgba(188, 154, 110, 0.04);
 }
 
 .glass-hover:hover {
@@ -304,7 +306,7 @@ body {
 }
 
 .glow-text-gold {
-  text-shadow: 0 0 20px rgba(212, 168, 67, 0.35), 0 0 40px rgba(212, 168, 67, 0.2);
+  text-shadow: 0 0 20px rgba(188, 154, 110, 0.35), 0 0 40px rgba(188, 154, 110, 0.2);
 }
 
 /* ============================================

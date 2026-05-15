@@ -61,9 +61,9 @@ export default function Navbar() {
         variants={navbarVariants}
         initial="hidden"
         animate="visible"
-        className="fixed top-5 left-1/2 -translate-x-1/2 z-[60] w-[calc(100%-2rem)] max-w-7xl"
+        className="fixed top-4 left-1/2 -translate-x-1/2 z-[60] w-[calc(100%-1rem)] max-w-[var(--content)] sm:top-5 sm:w-[calc(100%-2rem)]"
       >
-        <div className="glass-liquid glass-hover rounded-2xl px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-4 xl:gap-8 transition-all duration-500">
+        <div className="glass-liquid glass-hover rounded-2xl px-3 py-2.5 flex items-center justify-between gap-3 sm:px-5 sm:py-3 lg:px-6 xl:gap-6 transition-all duration-500">
           {/* Brand */}
           <Link href="/" className="flex items-center gap-2.5 group shrink-0">
             <Image
@@ -80,7 +80,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden lg:flex items-center gap-0">
+          <div className="hidden lg:flex items-center gap-0.5 xl:gap-1">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.label}

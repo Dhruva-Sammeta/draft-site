@@ -20,11 +20,11 @@ export default function Button({
   className = "",
 }: ButtonProps) {
   const baseClasses =
-    "group inline-flex min-h-[58px] items-center justify-center gap-4 rounded-full border px-7 text-sm font-black tracking-wide transition-colors duration-300";
+    "group inline-flex min-h-[52px] items-center justify-center gap-3 rounded-full border px-5 text-[11px] font-black tracking-wide transition-colors duration-300 sm:min-h-[58px] sm:gap-4 sm:px-7 sm:text-sm";
 
   const variants = {
     primary: "glass-premium border-oakridge-teal text-oakridge-warm-white hover:shadow-[0_0_40px_rgba(48,205,215,0.3)]",
-    gold: "glass-gold border-oakridge-gold text-oakridge-warm-white hover:shadow-[0_0_50px_rgba(212,168,67,0.4)]",
+    gold: "glass-gold border-oakridge-gold text-oakridge-warm-white hover:shadow-[0_0_50px_rgba(188,154,110,0.4)]",
     secondary: "glass-premium border-oakridge-teal/20 text-oakridge-warm-white hover:shadow-[0_0_30px_rgba(48,205,215,0.2)]",
     outline: "glass-frosted border-oakridge-teal/30 text-oakridge-warm-white hover:shadow-[0_0_35px_rgba(48,205,215,0.25)]",
   };

@@ -19,7 +19,7 @@ export default function CommitteePreviewSection() {
 
   return (
     <section className="relative bg-oakridge-navy py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[var(--content)] px-4 sm:px-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -50,7 +50,7 @@ export default function CommitteePreviewSection() {
               <motion.div key={committee.slug} variants={itemVariants}>
                 <Link
                   href={`/committees/${committee.slug}`}
-                  className="group relative flex flex-col overflow-hidden rounded-2xl border border-oakridge-teal/15 bg-oakridge-paper/40 p-5 transition-all duration-300 h-full hover:shadow-[0_0_24px_rgba(212,168,67,0.18)] hover:border-oakridge-gold/40"
+                  className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-oakridge-teal/15 bg-oakridge-paper/40 p-5 transition-all duration-300 hover:border-oakridge-gold/40 hover:shadow-[0_0_24px_rgba(188,154,110,0.18)]"
                 >
                   <span className="committee-numeral absolute -right-2 -top-4 text-7xl leading-none select-none">
                     {committee.symbol}

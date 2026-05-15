@@ -63,16 +63,16 @@ export default function HeroContent() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-5 px-4 py-6 text-center sm:gap-7 md:gap-9 md:py-16 lg:py-20"
+      className="relative z-10 mx-auto flex w-full max-w-[var(--content)] flex-col items-center justify-center gap-5 px-4 py-6 text-center sm:gap-7 md:gap-9 md:py-16 lg:py-20"
     >
       {/* Logo Crest */}
-      <motion.div variants={itemVariants} className="rounded-[2rem] border border-oakridge-teal/10 glass-frosted px-5 py-5 sm:px-7 sm:py-7">
+      <motion.div variants={itemVariants} className="rounded-[2rem] border border-oakridge-teal/10 glass-frosted px-4 py-4 sm:px-6 sm:py-6 md:px-7 md:py-7">
         <Image
           src="/favicon.svg"
           alt="Oakridge MUN Crest"
           width={200}
           height={200}
-          className="mx-auto w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] drop-shadow-[0_0_60px_rgba(48,205,215,0.28)]"
+          className="mx-auto w-[104px] h-[104px] sm:w-[144px] sm:h-[144px] md:w-[184px] md:h-[184px] lg:w-[200px] lg:h-[200px] drop-shadow-[0_0_60px_rgba(48,205,215,0.28)]"
           priority
         />
       </motion.div>
@@ -94,11 +94,11 @@ export default function HeroContent() {
       )}
 
       {/* Main Headline */}
-      <motion.div variants={itemVariants} className="relative w-full max-w-5xl rounded-[2.5rem] border border-oakridge-teal/10 glass-liquid px-6 py-8 shadow-[0_24px_70px_rgba(0,0,0,0.22)] sm:px-10 sm:py-10 md:px-14 md:py-12">
+      <motion.div variants={itemVariants} className="relative w-full max-w-[var(--content-narrow)] rounded-[2.5rem] border border-oakridge-teal/10 glass-liquid px-5 py-7 shadow-[0_24px_70px_rgba(0,0,0,0.22)] sm:px-8 sm:py-9 md:px-12 md:py-12">
         {/* Floating Chapter Badge */}
         <motion.div
           variants={badgeVariants}
-          className="absolute right-[2%] -top-3 z-20 rounded-lg border-[2px] border-dashed border-oakridge-gold/40 bg-oakridge-deep/60 px-3 py-1 text-base font-black text-oakridge-gold sm:right-[12%] sm:-top-6 sm:text-3xl sm:rounded-xl sm:border-[2.5px] sm:px-4 sm:py-1.5 md:right-[10%] md:-top-8 md:px-5 md:py-2 md:text-4xl"
+          className="absolute right-[1.5%] -top-3 z-20 rounded-lg border-[2px] border-dashed border-oakridge-gold/40 bg-oakridge-deep/60 px-3 py-1 text-base font-black text-oakridge-gold sm:right-[8%] sm:-top-6 sm:text-3xl sm:rounded-xl sm:border-[2.5px] sm:px-4 sm:py-1.5 md:right-[10%] md:-top-8 md:px-5 md:py-2 md:text-4xl"
         >
           {HERO_CONFIG.heading.badge}
         </motion.div>
@@ -106,7 +106,7 @@ export default function HeroContent() {
         <h1 className="font-heading text-[clamp(32px,8vw,130px)] font-black leading-[1.05] tracking-[-0.03em] text-oakridge-warm-white">
           <span className="block drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]">{HERO_CONFIG.heading.line1}</span>
           <span className="block drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
-            <span className="text-oakridge-gold drop-shadow-[0_0_24px_rgba(212,168,67,0.36)]">{HERO_CONFIG.heading.highlight}</span>{" "}
+            <span className="text-oakridge-gold drop-shadow-[0_0_24px_rgba(188,154,110,0.36)]">{HERO_CONFIG.heading.highlight}</span>{" "}
             {HERO_CONFIG.heading.line2}
           </span>
           <span className="block drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]">{HERO_CONFIG.heading.line3}</span>
@@ -119,9 +119,9 @@ export default function HeroContent() {
           <Link
             key={btn.text}
             href={btn.href}
-            className={`rounded-full px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] transition-all duration-300 sm:px-9 sm:py-4 sm:text-[13px] ${
+            className={`rounded-full px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] transition-all duration-300 sm:px-8 sm:py-4 sm:text-[13px] md:px-9 ${
               btn.style === "primary"
-                ? "glass-gold text-oakridge-warm-white shadow-[0_4px_20px_rgba(212,168,67,0.24)] hover:shadow-[0_6px_36px_rgba(212,168,67,0.38)] hover:border-oakridge-gold"
+                ? "glass-gold text-oakridge-warm-white shadow-[0_4px_20px_rgba(188,154,110,0.24)] hover:shadow-[0_6px_36px_rgba(188,154,110,0.38)] hover:border-oakridge-gold"
                 : "glass-premium border-oakridge-warm-white/25 text-oakridge-warm-white hover:border-oakridge-gold hover:text-oakridge-gold"
             }`}
           >
@@ -131,7 +131,7 @@ export default function HeroContent() {
       </motion.div>
 
       {/* Countdown Timer - overlaid directly */}
-      <motion.div variants={itemVariants} className="w-full max-w-md mt-2 rounded-[2rem] border border-oakridge-teal/10 glass-frosted px-4 py-4 sm:max-w-2xl sm:mt-4 sm:px-6 sm:py-5">
+      <motion.div variants={itemVariants} className="w-full max-w-[var(--content-narrow)] mt-2 rounded-[2rem] border border-oakridge-teal/10 glass-frosted px-4 py-4 sm:mt-4 sm:px-6 sm:py-5">
         <p className="mb-3 text-[10px] font-black uppercase tracking-[0.25em] text-oakridge-teal/70 sm:text-[11px]">
           Conference begins in
         </p>

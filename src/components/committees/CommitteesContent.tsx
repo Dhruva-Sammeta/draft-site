@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import CommitteeModal from "@/components/ui/CommitteeModal";
 import BackgroundGrid from "@/components/ui/BackgroundGrid";
 import { committeesData } from "@/data/committees";

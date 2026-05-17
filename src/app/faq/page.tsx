@@ -108,7 +108,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         onClick={() => setOpen(!open)}
         className="flex w-full items-center justify-between gap-4 py-5 text-left transition-colors duration-200 group"
       >
-        <span className="font-sans text-base font-bold text-oakridge-navy group-hover:text-oakridge-dark-teal transition-colors duration-200 sm:text-lg">
+        <span className="font-sans text-base font-bold text-oakridge-warm-white group-hover:text-oakridge-teal transition-colors duration-200 sm:text-lg">
           {q}
         </span>
         <motion.span
@@ -128,7 +128,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-sm leading-relaxed text-oakridge-navy/68 sm:text-base">
+            <p className="pb-5 text-sm leading-relaxed text-oakridge-muted sm:text-base">
               {a}
             </p>
           </motion.div>

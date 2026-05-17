@@ -58,7 +58,7 @@ export default function SecGenNote() {
         {/* Quote */}
         <motion.blockquote
           variants={itemVariants}
-          className="font-heading text-[clamp(22px,3.8vw,42px)] font-black leading-[1.18] tracking-[-0.025em] text-oakridge-navy"
+          className="font-heading text-[clamp(22px,3.8vw,42px)] font-black leading-[1.18] tracking-[-0.025em] text-oakridge-warm-white"
         >
           &ldquo;Sixteen years ago, this conference was a dream held by a handful of
           students with a belief that young voices could shape the world. Today,
@@ -74,7 +74,7 @@ export default function SecGenNote() {
         >
           <div className="h-px flex-1 bg-oakridge-teal/20" />
           <div className="text-right">
-            <p className="font-sans text-base font-black text-oakridge-navy">
+            <p className="font-sans text-base font-black text-oakridge-warm-white">
               Shrey Vajpayee
             </p>
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-oakridge-dark-teal">

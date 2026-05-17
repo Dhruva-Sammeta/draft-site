@@ -7,13 +7,9 @@ export default function SmoothScroll() {
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
-    const connection = (navigator as Navigator & {
-      connection?: { saveData?: boolean; effectiveType?: string };
-    }).connection;
-    const slowNetwork = connection?.saveData || ["slow-2g", "2g", "3g"].includes(connection?.effectiveType ?? "");
 
-    // Native scrolling is smoother and cheaper on low-power touch devices.
-    if (prefersReducedMotion || isTouchDevice || slowNetwork) {
+    // Keep native scrolling on touch and reduced-motion devices.
+    if (prefersReducedMotion || isTouchDevice) {
       return;
     }
 
@@ -22,22 +18,17 @@ export default function SmoothScroll() {
     root.style.scrollBehavior = "auto";
 
     const lenis = new Lenis({
-      duration: 0.85,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      duration: 1.35,          // scroll animation duration (seconds) — higher = slower feel
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // expo ease-out
       orientation: "vertical",
       smoothWheel: true,
-      wheelMultiplier: 0.78,
-      touchMultiplier: 1,
+      touchMultiplier: 1.5,
     });
 
     // Integrate with requestAnimationFrame for smooth loop
     let raf: number;
-    let lastTime = 0;
     function loop(time: number) {
-      if (time - lastTime > 8) {
-        lenis.raf(time);
-        lastTime = time;
-      }
+      lenis.raf(time);
       raf = requestAnimationFrame(loop);
     }
     raf = requestAnimationFrame(loop);

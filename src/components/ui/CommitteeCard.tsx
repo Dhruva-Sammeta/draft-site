@@ -39,27 +39,27 @@ export default function CommitteeCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-70px" }}
       transition={{ duration: 0.65, delay: index * 0.03, ease: [0.22, 1, 0.36, 1] }}
-      className="group glass-liquid mx-auto w-full max-w-[var(--content)] rounded-2xl transition-all duration-300 hover:border-oakridge-dark-teal/35 hover:bg-white"
+      className="group glass-liquid mx-auto w-full max-w-[var(--content)] rounded-2xl transition-all duration-300 hover:-translate-y-0.5 hover:border-oakridge-teal/35 hover:bg-oakridge-paper/60"
     >
       <Wrapper
         {...wrapperProps}
         className="grid min-h-[128px] w-full grid-cols-[42px_1fr] items-center gap-4 px-4 py-5 text-left sm:grid-cols-[50px_1fr] sm:px-5 sm:py-6 md:grid-cols-[60px_48px_minmax(200px,0.4fr)_1fr] md:gap-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oakridge-teal/60 focus-visible:ring-offset-2 focus-visible:ring-offset-oakridge-navy"
       >
-        <span className="font-mono text-sm font-black text-oakridge-red">{number}.</span>
-        <span className="hidden md:block text-lg font-black italic text-oakridge-dark-teal/50 tracking-wide group-hover:text-oakridge-dark-teal">
+        <span className="font-mono text-sm font-black text-oakridge-gold group-hover:text-oakridge-gold">{number}.</span>
+        <span className="hidden md:block text-lg font-black italic text-oakridge-teal/40 tracking-wide group-hover:text-oakridge-dark-teal">
           {symbol}
         </span>
         <div className="overflow-hidden">
           <p className="mb-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-oakridge-dark-teal group-hover:text-oakridge-dark-teal">
             {type}
           </p>
-          <h3 className="font-sans text-2xl font-black leading-none tracking-[-0.04em] text-oakridge-navy transition-colors duration-300 group-hover:text-oakridge-dark-teal md:text-4xl">
+          <h3 className="font-sans text-2xl font-black leading-none tracking-[-0.04em] text-oakridge-warm-white transition-colors duration-300 group-hover:text-oakridge-teal md:text-4xl">
             {name}
           </h3>
-          <p className="mt-1 text-xs text-oakridge-navy/64 md:hidden">{fullName}</p>
+          <p className="mt-1 text-xs text-oakridge-muted md:hidden">{fullName}</p>
         </div>
         <div className="col-start-2 md:col-start-auto">
-          <p className="hidden text-sm leading-relaxed text-oakridge-navy/68 md:block">{fullName}</p>
+          <p className="hidden text-sm leading-relaxed text-oakridge-muted md:block">{fullName}</p>
           <p className="mt-1 text-xs text-oakridge-teal/60 group-hover:text-oakridge-dark-teal line-clamp-1 hidden md:block">Agenda: {agenda}</p>
         </div>
       </Wrapper>

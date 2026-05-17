@@ -45,7 +45,7 @@ export default function CommitteeModal({ committee, onClose }: CommitteeModalPro
           <motion.button
             type="button"
             aria-label="Close committee details"
-            className="absolute inset-0 bg-oakridge-navy/76"
+            className="absolute inset-0 bg-oakridge-ink/80 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -56,7 +56,7 @@ export default function CommitteeModal({ committee, onClose }: CommitteeModalPro
             role="dialog"
             aria-modal="true"
             aria-labelledby={`committee-title-${committee.slug}`}
-            className="glass-liquid relative flex max-h-[90vh] w-full max-w-[var(--content-narrow)] flex-col overflow-hidden rounded-3xl"
+            className="relative flex max-h-[90vh] w-full max-w-[var(--content-narrow)] flex-col overflow-hidden rounded-3xl glass-liquid shadow-[0_35px_90px_rgba(1,8,14,0.7)]"
             initial={{ y: 30, opacity: 0, scale: 0.98 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: 20, opacity: 0, scale: 0.98 }}
@@ -68,16 +68,16 @@ export default function CommitteeModal({ committee, onClose }: CommitteeModalPro
                 <p className="section-kicker text-oakridge-teal/70">{committee.type}</p>
                 <h2
                   id={`committee-title-${committee.slug}`}
-                  className="mt-2 font-sans text-3xl font-black tracking-[-0.04em] text-oakridge-navy sm:text-4xl"
+                  className="mt-2 font-sans text-3xl font-black tracking-[-0.04em] text-oakridge-warm-white sm:text-4xl"
                 >
                   {committee.name}
                 </h2>
-                <p className="mt-2 text-sm text-oakridge-navy/65 max-w-2xl">{committee.fullName}</p>
+                <p className="mt-2 text-sm text-oakridge-muted max-w-2xl">{committee.fullName}</p>
               </div>
               <button
                 type="button"
                 onClick={onClose}
-                className="rounded-full border border-oakridge-navy/18 bg-oakridge-warm-white px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-oakridge-navy transition-colors hover:border-oakridge-red hover:text-oakridge-red"
+                className="rounded-full border border-oakridge-gold/30 bg-oakridge-deep/70 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-oakridge-warm-white transition-colors hover:border-oakridge-gold hover:text-oakridge-gold"
               >
                 Close
               </button>
@@ -85,23 +85,23 @@ export default function CommitteeModal({ committee, onClose }: CommitteeModalPro
 
             <div className="grid gap-6 px-6 pb-6 pt-5 md:grid-cols-[1.15fr_0.85fr] overflow-y-auto flex-1 min-h-0">
               <div className="space-y-5">
-                <div className="rounded-2xl border border-oakridge-navy/12 bg-white p-5">
+                <div className="rounded-2xl border border-oakridge-teal/15 bg-oakridge-navy/70 p-5">
                   <p className="section-kicker mb-3">Agenda</p>
-                  <h3 className="font-sans text-xl font-black tracking-[-0.03em] text-oakridge-navy">
+                  <h3 className="font-sans text-xl font-black tracking-[-0.03em] text-oakridge-warm-white">
                     {committee.agenda}
                   </h3>
                 </div>
 
-                <div className="rounded-2xl border border-oakridge-navy/12 bg-white p-5">
+                <div className="rounded-2xl border border-oakridge-teal/15 bg-oakridge-navy/60 p-5">
                   <p className="section-kicker mb-2">Background & Focus</p>
-                  <p className="text-sm leading-relaxed text-oakridge-navy/68">{committee.overview}</p>
-                  <p className="text-sm leading-relaxed text-oakridge-navy/68 mt-2">{committee.description}</p>
+                  <p className="text-sm leading-relaxed text-oakridge-muted">{committee.overview}</p>
+                  <p className="text-sm leading-relaxed text-oakridge-muted mt-2">{committee.description}</p>
                 </div>
               </div>
 
               <div className="space-y-5">
-                <div className="flex items-center gap-4 rounded-2xl border border-oakridge-navy/12 bg-white p-5">
-                  <span className="flex h-16 w-16 items-center justify-center rounded-2xl border border-oakridge-dark-teal/20 bg-oakridge-light-teal/30 text-2xl font-black italic text-oakridge-dark-teal">
+                <div className="flex items-center gap-4 rounded-2xl border border-oakridge-teal/15 bg-oakridge-navy/70 p-5">
+                  <span className="flex h-16 w-16 items-center justify-center rounded-2xl border border-oakridge-teal/20 bg-oakridge-paper text-2xl font-black italic text-oakridge-teal">
                     {committee.symbol}
                   </span>
                   <div>
@@ -118,28 +118,28 @@ export default function CommitteeModal({ committee, onClose }: CommitteeModalPro
                   ].map((detail) => (
                     <div
                       key={detail.label}
-                      className="rounded-2xl border border-oakridge-navy/12 bg-white p-4 text-center"
+                      className="rounded-2xl border border-oakridge-teal/15 bg-oakridge-navy/70 p-4 text-center"
                     >
                       <span className="block text-[9px] font-black uppercase tracking-[0.22em] text-oakridge-teal/70">
                         {detail.label}
                       </span>
-                      <span className="mt-2 block text-sm font-bold text-oakridge-navy">
+                      <span className="mt-2 block text-sm font-bold text-oakridge-warm-white">
                         {detail.value}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <div className="rounded-2xl border border-oakridge-navy/12 bg-white p-5">
+                <div className="rounded-2xl border border-oakridge-teal/15 bg-oakridge-navy/70 p-5">
                   <p className="section-kicker mb-3">Executive Board</p>
                   <div className="space-y-3">
                     {chairs.map((chair) => (
                       <div
                         key={`${committee.slug}-${chair.role}`}
-                        className="flex items-center justify-between gap-3 rounded-xl border border-oakridge-navy/10 bg-oakridge-warm-white px-4 py-3"
+                        className="flex items-center justify-between gap-3 rounded-xl border border-oakridge-teal/10 bg-oakridge-paper/40 px-4 py-3"
                       >
-                        <span className="text-xs font-bold text-oakridge-navy/58">{chair.role}</span>
-                        <span className="text-sm font-black text-oakridge-navy">{chair.name}</span>
+                        <span className="text-xs font-bold text-oakridge-muted">{chair.role}</span>
+                        <span className="text-sm font-black text-oakridge-warm-white">{chair.name}</span>
                       </div>
                     ))}
                   </div>
@@ -147,7 +147,7 @@ export default function CommitteeModal({ committee, onClose }: CommitteeModalPro
 
                 <Link
                   href={`/committees/${committee.slug}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-oakridge-gold bg-oakridge-gold w-full py-2 text-xs font-black uppercase tracking-[0.18em] text-oakridge-navy transition-colors hover:border-oakridge-navy hover:bg-oakridge-warm-white"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-oakridge-gold/30 bg-oakridge-deep/70 w-full py-2 text-xs font-black uppercase tracking-[0.18em] text-oakridge-gold transition-colors hover:border-oakridge-gold hover:text-oakridge-gold"
                 >
                   Full Page
                   <span aria-hidden="true">&rarr;</span>

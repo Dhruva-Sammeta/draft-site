@@ -35,7 +35,7 @@ export default function Footer() {
                 alt="Oakridge MUN"
                 width={52}
                 height={52}
-                className=""
+                className="drop-shadow-md"
               />
             </div>
             <p className="max-w-xs text-sm leading-relaxed text-oakridge-muted">

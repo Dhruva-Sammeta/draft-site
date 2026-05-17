@@ -50,11 +50,11 @@ export default function Countdown() {
       {timeUnits.map((unit) => (
         <div
           key={unit.label}
-          className="flex flex-col items-center justify-center rounded-xl border border-oakridge-light-teal/22 bg-oakridge-deep px-1.5 py-3 sm:rounded-2xl sm:px-4 sm:py-5"
+          className="flex flex-col items-center justify-center rounded-xl border border-oakridge-teal/20 bg-[#072237]/80 px-1.5 py-3 backdrop-blur-sm sm:rounded-2xl sm:px-4 sm:py-5"
         >
           <span
             suppressHydrationWarning
-            className="block font-sans text-2xl font-black leading-none text-oakridge-warm-white sm:text-4xl md:text-5xl tabular-nums"
+            className="block font-sans text-2xl font-black leading-none text-oakridge-warm-white sm:text-4xl md:text-5xl tabular-nums drop-shadow-md"
           >
             {String(unit.value).padStart(2, "0")}
           </span>

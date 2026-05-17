@@ -19,10 +19,10 @@ export default function SecretariatPage() {
         </p>
 
         <div className="thin-panel mx-auto mt-14 max-w-[var(--content-narrow)] p-7 sm:p-10 md:p-16">
-          <p className="font-sans text-2xl font-black tracking-[-0.05em] text-oakridge-navy sm:text-4xl md:text-6xl">
+          <p className="font-sans text-2xl font-black tracking-[-0.05em] text-oakridge-warm-white sm:text-4xl md:text-6xl">
             Secretariat details will be announced soon.
           </p>
-          <p className="mt-5 text-oakridge-navy/65">Stay tuned for the official reveal.</p>
+          <p className="mt-5 text-oakridge-muted">Stay tuned for the official reveal.</p>
         </div>
       </div>
     </div>

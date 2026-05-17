@@ -29,11 +29,11 @@ export default function ScheduleSection() {
           <motion.div variants={itemVariants} className="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="section-kicker mb-2">Conference Schedule</p>
-              <h2 className="font-sans text-3xl font-black tracking-[-0.04em] text-oakridge-navy md:text-5xl">
+              <h2 className="font-sans text-3xl font-black tracking-[-0.04em] text-oakridge-warm-white md:text-5xl">
                 Three days, paced for debate.
               </h2>
             </div>
-            <p className="max-w-md text-sm leading-relaxed text-oakridge-navy/68">
+            <p className="max-w-md text-sm leading-relaxed text-oakridge-muted">
               A compact overview of registrations, sessions, meals, ceremonies, and dispersal windows.
             </p>
           </motion.div>
